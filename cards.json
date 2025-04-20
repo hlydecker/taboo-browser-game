@@ -1,1 +1,346 @@
-
+[
+  {
+    "mainWord": "COMPUTER",
+    "tabooWords": ["KEYBOARD", "SCREEN", "MOUSE", "TECHNOLOGY", "LAPTOP"]
+  },
+  {
+    "mainWord": "BEACH",
+    "tabooWords": ["SAND", "OCEAN", "SUN", "WAVE", "SWIM"]
+  },
+  {
+    "mainWord": "PIZZA",
+    "tabooWords": ["CHEESE", "PEPPERONI", "ITALIAN", "SLICE", "DOUGH"]
+  },
+  {
+    "mainWord": "FOOTBALL",
+    "tabooWords": ["SPORT", "BALL", "TOUCHDOWN", "FIELD", "QUARTERBACK"]
+  },
+  {
+    "mainWord": "MOVIE",
+    "tabooWords": ["FILM", "CINEMA", "ACTOR", "SCREEN", "THEATER"]
+  },
+  {
+    "mainWord": "BOOK",
+    "tabooWords": ["READ", "PAGES", "AUTHOR", "LIBRARY", "STORY"]
+  },
+  {
+    "mainWord": "COFFEE",
+    "tabooWords": ["DRINK", "CAFFEINE", "BEAN", "HOT", "MORNING"]
+  },
+  {
+    "mainWord": "AIRPLANE",
+    "tabooWords": ["FLY", "TRAVEL", "PILOT", "AIRPORT", "WINGS"]
+  },
+  {
+    "mainWord": "BICYCLE",
+    "tabooWords": ["RIDE", "WHEELS", "PEDAL", "HELMET", "CYCLE"]
+  },
+  {
+    "mainWord": "BIRTHDAY",
+    "tabooWords": ["CAKE", "PRESENTS", "PARTY", "CELEBRATE", "AGE"]
+  },
+  {
+    "mainWord": "CAMERA",
+    "tabooWords": ["PHOTO", "PICTURE", "LENS", "FLASH", "PHOTOGRAPHY"]
+  },
+  {
+    "mainWord": "DENTIST",
+    "tabooWords": ["TEETH", "DRILL", "CAVITY", "APPOINTMENT", "MOUTH"]
+  },
+  {
+    "mainWord": "ELEPHANT",
+    "tabooWords": ["ANIMAL", "TRUNK", "TUSK", "LARGE", "GRAY"]
+  },
+  {
+    "mainWord": "FIREWORK",
+    "tabooWords": ["EXPLOSION", "SKY", "COLOR", "CELEBRATION", "JULY"]
+  },
+  {
+    "mainWord": "GUITAR",
+    "tabooWords": ["MUSIC", "STRING", "INSTRUMENT", "PLAY", "BAND"]
+  },
+  {
+    "mainWord": "HOSPITAL",
+    "tabooWords": ["DOCTOR", "NURSE", "SICK", "EMERGENCY", "PATIENT"]
+  },
+  {
+    "mainWord": "INTERNET",
+    "tabooWords": ["WEBSITE", "ONLINE", "COMPUTER", "WEB", "NETWORK"]
+  },
+  {
+    "mainWord": "JACKET",
+    "tabooWords": ["COAT", "CLOTHING", "WEAR", "COLD", "ZIPPER"]
+  },
+  {
+    "mainWord": "KITCHEN",
+    "tabooWords": ["COOK", "FOOD", "STOVE", "REFRIGERATOR", "ROOM"]
+  },
+  {
+    "mainWord": "LIBRARY",
+    "tabooWords": ["BOOKS", "READ", "QUIET", "BORROW", "SHELVES"]
+  },
+  {
+    "mainWord": "MOUNTAIN",
+    "tabooWords": ["CLIMB", "HIGH", "PEAK", "HILL", "SNOW"]
+  },
+  {
+    "mainWord": "NEWSPAPER",
+    "tabooWords": ["READ", "NEWS", "PAPER", "ARTICLE", "DAILY"]
+  },
+  {
+    "mainWord": "OCTOPUS",
+    "tabooWords": ["ANIMAL", "TENTACLES", "OCEAN", "EIGHT", "INK"]
+  },
+  {
+    "mainWord": "POPCORN",
+    "tabooWords": ["MOVIE", "BUTTER", "KERNEL", "SNACK", "MICROWAVE"]
+  },
+  {
+    "mainWord": "QUEEN",
+    "tabooWords": ["KING", "CROWN", "ROYAL", "MONARCHY", "PRINCESS"]
+  },
+  {
+    "mainWord": "RAINBOW",
+    "tabooWords": ["COLORS", "SKY", "RAIN", "ARCH", "SPECTRUM"]
+  },
+  {
+    "mainWord": "SWIMMING",
+    "tabooWords": ["WATER", "POOL", "STROKE", "EXERCISE", "DIVE"]
+  },
+  {
+    "mainWord": "TELESCOPE",
+    "tabooWords": ["STARS", "SPACE", "MAGNIFY", "LENS", "ASTRONOMY"]
+  },
+  {
+    "mainWord": "UMBRELLA",
+    "tabooWords": ["RAIN", "PROTECTION", "OPEN", "HANDLE", "WET"]
+  },
+  {
+    "mainWord": "VOLCANO",
+    "tabooWords": ["ERUPTION", "LAVA", "MOUNTAIN", "ASH", "MAGMA"]
+  },
+  {
+    "mainWord": "WEDDING",
+    "tabooWords": ["MARRIAGE", "BRIDE", "CEREMONY", "GROOM", "RECEPTION"]
+  },
+  {
+    "mainWord": "XYLOPHONE",
+    "tabooWords": ["INSTRUMENT", "MUSIC", "WOODEN", "MALLETS", "PLAY"]
+  },
+  {
+    "mainWord": "YOGURT",
+    "tabooWords": ["DAIRY", "FOOD", "BREAKFAST", "FRUIT", "SPOON"]
+  },
+  {
+    "mainWord": "ZEBRA",
+    "tabooWords": ["ANIMAL", "STRIPES", "BLACK", "WHITE", "AFRICA"]
+  },
+  {
+    "mainWord": "ASTRONAUT",
+    "tabooWords": ["SPACE", "NASA", "ROCKET", "MOON", "HELMET"]
+  },
+  {
+    "mainWord": "BACKPACK",
+    "tabooWords": ["SCHOOL", "BAG", "CARRY", "BOOKS", "STRAP"]
+  },
+  {
+    "mainWord": "CHOCOLATE",
+    "tabooWords": ["SWEET", "CANDY", "COCOA", "DESSERT", "BROWN"]
+  },
+  {
+    "mainWord": "DINOSAUR",
+    "tabooWords": ["EXTINCT", "PREHISTORIC", "REPTILE", "FOSSIL", "JURASSIC"]
+  },
+  {
+    "mainWord": "ENVELOPE",
+    "tabooWords": ["MAIL", "LETTER", "STAMP", "PAPER", "SEAL"]
+  },
+  {
+    "mainWord": "FIREFIGHTER",
+    "tabooWords": ["FIRE", "EMERGENCY", "HOSE", "TRUCK", "RESCUE"]
+  },
+  {
+    "mainWord": "GLASSES",
+    "tabooWords": ["EYES", "VISION", "SEE", "LENSES", "FRAMES"]
+  },
+  {
+    "mainWord": "HAMMOCK",
+    "tabooWords": ["SWING", "RELAX", "SLEEP", "TREES", "ROPE"]
+  },
+  {
+    "mainWord": "ISLAND",
+    "tabooWords": ["WATER", "BEACH", "OCEAN", "TROPICAL", "SURROUNDED"]
+  },
+  {
+    "mainWord": "JIGSAW",
+    "tabooWords": ["PUZZLE", "PIECES", "PICTURE", "FIT", "COMPLETE"]
+  },
+  {
+    "mainWord": "KANGAROO",
+    "tabooWords": ["ANIMAL", "AUSTRALIA", "JUMP", "POUCH", "JOEY"]
+  },
+  {
+    "mainWord": "LIGHTHOUSE",
+    "tabooWords": ["OCEAN", "SHIP", "COAST", "LIGHT", "WARNING"]
+  },
+  {
+    "mainWord": "MICROWAVE",
+    "tabooWords": ["HEAT", "FOOD", "KITCHEN", "APPLIANCE", "COOK"]
+  },
+  {
+    "mainWord": "NECKLACE",
+    "tabooWords": ["JEWELRY", "NECK", "CHAIN", "WEAR", "PENDANT"]
+  },
+  {
+    "mainWord": "ORCHESTRA",
+    "tabooWords": ["MUSIC", "INSTRUMENTS", "CONDUCTOR", "SYMPHONY", "MUSICIANS"]
+  },
+  {
+    "mainWord": "PENGUIN",
+    "tabooWords": ["BIRD", "ANTARCTICA", "BLACK", "WHITE", "SWIM"]
+  },
+  {
+    "mainWord": "QUILT",
+    "tabooWords": ["BLANKET", "BED", "WARM", "SEWING", "PATCHES"]
+  },
+  {
+    "mainWord": "ROLLERCOASTER",
+    "tabooWords": ["RIDE", "AMUSEMENT", "PARK", "THRILL", "TRACK"]
+  },
+  {
+    "mainWord": "SNOWMAN",
+    "tabooWords": ["SNOW", "WINTER", "CARROT", "HAT", "COLD"]
+  },
+  {
+    "mainWord": "TOOTHBRUSH",
+    "tabooWords": ["TEETH", "CLEAN", "PASTE", "MOUTH", "BRISTLES"]
+  },
+  {
+    "mainWord": "UNIVERSITY",
+    "tabooWords": ["SCHOOL", "COLLEGE", "DEGREE", "EDUCATION", "CAMPUS"]
+  },
+  {
+    "mainWord": "VIOLIN",
+    "tabooWords": ["INSTRUMENT", "MUSIC", "STRING", "BOW", "ORCHESTRA"]
+  },
+  {
+    "mainWord": "WATERFALL",
+    "tabooWords": ["WATER", "FLOW", "CASCADE", "RIVER", "RUSHING"]
+  },
+  {
+    "mainWord": "XRAY",
+    "tabooWords": ["MEDICAL", "BONE", "DOCTOR", "SCAN", "IMAGE"]
+  },
+  {
+    "mainWord": "YACHT",
+    "tabooWords": ["BOAT", "OCEAN", "SAIL", "LUXURY", "WATER"]
+  },
+  {
+    "mainWord": "ZOMBIE",
+    "tabooWords": ["DEAD", "WALKING", "BRAIN", "APOCALYPSE", "UNDEAD"]
+  },
+  {
+    "mainWord": "AVOCADO",
+    "tabooWords": ["FRUIT", "GREEN", "GUACAMOLE", "PIT", "TOAST"]
+  },
+  {
+    "mainWord": "BARBEQUE",
+    "tabooWords": ["GRILL", "MEAT", "OUTDOORS", "COOK", "SUMMER"]
+  },
+  {
+    "mainWord": "CARNIVAL",
+    "tabooWords": ["RIDES", "GAMES", "FAIR", "COTTON CANDY", "FUN"]
+  },
+  {
+    "mainWord": "DEMOCRACY",
+    "tabooWords": ["GOVERNMENT", "VOTE", "ELECTION", "PEOPLE", "FREEDOM"]
+  },
+  {
+    "mainWord": "EARRING",
+    "tabooWords": ["JEWELRY", "EAR", "PIERCE", "WEAR", "ACCESSORY"]
+  },
+  {
+    "mainWord": "FOUNTAIN",
+    "tabooWords": ["WATER", "PARK", "WISH", "COINS", "SPRAY"]
+  },
+  {
+    "mainWord": "GARDEN",
+    "tabooWords": ["PLANTS", "FLOWERS", "GROW", "OUTDOORS", "VEGETABLES"]
+  },
+  {
+    "mainWord": "HELICOPTER",
+    "tabooWords": ["FLY", "AIRCRAFT", "ROTOR", "BLADES", "PILOT"]
+  },
+  {
+    "mainWord": "IGLOO",
+    "tabooWords": ["SNOW", "ICE", "ESKIMO", "ARCTIC", "DOME"]
+  },
+  {
+    "mainWord": "JELLYFISH",
+    "tabooWords": ["OCEAN", "STING", "TENTACLES", "TRANSPARENT", "SWIM"]
+  },
+  {
+    "mainWord": "KOALA",
+    "tabooWords": ["ANIMAL", "AUSTRALIA", "EUCALYPTUS", "BEAR", "MARSUPIAL"]
+  },
+  {
+    "mainWord": "LADYBUG",
+    "tabooWords": ["INSECT", "RED", "SPOTS", "BEETLE", "WINGS"]
+  },
+  {
+    "mainWord": "MARATHON",
+    "tabooWords": ["RUN", "RACE", "MILES", "DISTANCE", "ENDURANCE"]
+  },
+  {
+    "mainWord": "NOODLES",
+    "tabooWords": ["PASTA", "EAT", "SOUP", "LONG", "SPAGHETTI"]
+  },
+  {
+    "mainWord": "OLYMPICS",
+    "tabooWords": ["SPORTS", "ATHLETES", "GAMES", "MEDALS", "COMPETITION"]
+  },
+  {
+    "mainWord": "PYRAMID",
+    "tabooWords": ["EGYPT", "TRIANGLE", "PHARAOH", "ANCIENT", "DESERT"]
+  },
+  {
+    "mainWord": "QUICKSAND",
+    "tabooWords": ["SINK", "SAND", "TRAP", "STUCK", "DANGER"]
+  },
+  {
+    "mainWord": "ROCKET",
+    "tabooWords": ["SPACE", "LAUNCH", "NASA", "ASTRONAUT", "MOON"]
+  },
+  {
+    "mainWord": "SCARECROW",
+    "tabooWords": ["FARM", "BIRDS", "FIELD", "STRAW", "CORN"]
+  },
+  {
+    "mainWord": "TREASURE",
+    "tabooWords": ["HUNT", "GOLD", "CHEST", "PIRATE", "VALUABLE"]
+  },
+  {
+    "mainWord": "UNICORN",
+    "tabooWords": ["MYTHICAL", "HORSE", "HORN", "MAGICAL", "FANTASY"]
+  },
+  {
+    "mainWord": "VAMPIRE",
+    "tabooWords": ["BLOOD", "FANGS", "NIGHT", "DRACULA", "BITE"]
+  },
+  {
+    "mainWord": "WAFFLE",
+    "tabooWords": ["BREAKFAST", "SYRUP", "GRID", "IRON", "BATTER"]
+  },
+  {
+    "mainWord": "XYLOPHONE",
+    "tabooWords": ["INSTRUMENT", "MUSIC", "BARS", "MALLETS", "PERCUSSION"]
+  },
+  {
+    "mainWord": "YOGA",
+    "tabooWords": ["EXERCISE", "STRETCH", "POSES", "MEDITATION", "FLEXIBILITY"]
+  },
+  {
+    "mainWord": "ZODIAC",
+    "tabooWords": ["SIGNS", "STARS", "HOROSCOPE", "ASTROLOGY", "CONSTELLATION"]
+  }
+]
