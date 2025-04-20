@@ -1,1 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taboo Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-family: 'Press Start 2P', monospace;
+            margin-bottom: 25px;
+        }
+        .setup-container, .game-container, .card-container {
+            margin: 20px 0;
+        }
+        .team-setup {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .team {
+            flex: 1;
+            margin: 0 15px;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .team:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #team1 {
+            background-color: #3498db;
+            color: white;
+        }
+        #team2 {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .settings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 25px 0;
+        }
+        .settings > div {
+            flex: 1;
+            min-width: 280px;
+            margin: 12px 0;
+        }
+        .settings > div label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+            font-weight: 600;
+        }
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 5px;
+            transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: 'Press Start 2P', monospace;
+        }
+        button:hover {
+            background-color: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+        }
+        button:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+            opacity: 0.7;
+            box-shadow: none;
+            transform: translateY(0);
+        }
+        input, select {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin: 5px 0;
+            font-size: 16px;
+            transition: border-color 0.2s ease;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .scoreboard {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ecf0f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .score {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .score:hover {
+            transform: scale(1.05);
+        }
+        #team1Score {
+            color: #3498db;
+        }
+        #team2Score {
+            color: #e74c3c;
+        }
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        .card:hover{
+             transform: translateY(-4px);
+              box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+        .main-word {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 25px 0;
+            color: #2c3e50;
+            letter-spacing: 2px;
+            font-family: 'Press Start 2P', monospace;
+        }
+        .taboo-words {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+        .taboo-words li {
+            background-color: #e74c3c;
+            color: white;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .taboo-words li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        .timer {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin: 25px 0;
+            color: #3498db;
+            letter-spacing: 3px;
+            font-family: 'Press Start 2P', monospace;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
+        .game-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .game-controls button {
+             margin: 0 10px;
+        }
+        .center-buttons {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .loading {
+            text-align: center;
+            margin: 25px 0;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+        #deckLoadingStatus {
+            text-align: center;
+            color: #7f8c8d;
+            margin: 15px 0;
+            font-style: italic;
+            font-size: 16px;
+        }
+        #undoBtn {
+            background-color: #8e44ad;
+            margin-left: 10px;
+        }
+        #undoBtn:hover {
+             background-color: #7a2d91;
+        }
+        .card-history {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+        }
+        .card-history h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #34495e;
+            font-family: 'Press Start 2P', monospace;
+        }
+        .card-history ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .card-history li {
+            margin: 5px 0;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            font-size: 14px;
+        }
+        .pregame-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #passBtn {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        #passBtn:hover {
+            background-color: #d87d0e;
+        }
+
+        /* New Styles for Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family: 'Press Start 2P', monospace;
+        }
+        .modal-content p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .modal-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .modal-content li {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        .modal-content .modal-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .modal-content .modal-actions button{
+            padding: 12px 25px;
+            font-size: 18px;
+        }
+
+        /* Styles for Tutorial Overlay */
+        .tutorial-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.5;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .tutorial-overlay h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffdb58;
+        }
+
+        .tutorial-overlay p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .tutorial-overlay button {
+            padding: 15px 30px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .tutorial-overlay button:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Taboo Game</h1>
+
+        <div id="setup" class="setup-container">
+            <h2>Game Setup</h2>
+            <div id="deckLoadingStatus">Loading card deck...</div>
+            <div class="settings">
+                <div>
+                    <label for="team1Name">Team 1 Name:</label>
+                    <input type="text" id="team1Name" value="Blue Team">
+                </div>
+                <div>
+                    <label for="team2Name">Team 2 Name:</label>
+                    <input type="text" id="team2Name" value="Red Team">
+                </div>
+            </div>
+            <div class="settings">
+                <div>
+                    <label for="targetScore">Target Score to Win:</label>
+                    <input type="number" id="targetScore" min="1" value="10">
+                </div>
+                <div>
+                    <label for="turnDuration">Turn Duration (seconds):</label>
+                    <input type="number" id="turnDuration" min="10" max="120" value="45">
+                </div>
+            </div>
+            <div class="settings">
+                <div>
+                    <label for="difficulty">Difficulty Level:</label>
+                    <select id="difficulty">
+                        <option value="regular">Regular</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cardSource">Card Source:</label>
+                    <select id="cardSource">
+                        <option value="live">Live (OpenAI API)</option>
+                        <option value="deck">Pre-generated Deck</option>
+                    </select>
+                </div>
+            </div>
+            <div class="settings">
+                <div>
+                    <label for="apiKey">OpenAI API Key (for Live mode):</label>
+                    <input type="password" id="apiKey" placeholder="sk-...">
+                </div>
+            </div>
+            <div class="center-buttons">
+                <button id="startGameBtn" disabled>Start Game</button>
+            </div>
+             <div class="center-buttons">
+                <button id="showTutorialBtn">Show Tutorial</button>
+            </div>
+        </div>
+
+        <div id="game" class="game-container hidden">
+            <div class="scoreboard">
+                <div class="score" id="team1Score">
+                    <span id="team1NameDisplay">Blue Team</span>: <span id="team1ScoreValue">0</span>
+                </div>
+                <div class="score" id="team2Score">
+                    <span id="team2NameDisplay">Red Team</span>: <span id="team2ScoreValue">0</span>
+                </div>
+            </div>
+
+            <h2 id="turnIndicator">Blue Team's Turn</h2>
+
+            <div id="pregameTurn" class="center-buttons">
+                <p>Get ready! <span id="currentPlayerTeam">Blue Team</span> player will give clues.</p>
+                <p><span id="opposingTeam">Red Team</span> player should watch for taboo words.</p>
+                 <div class="pregame-buttons">
+                    <button id="startTurnBtn">Start Turn</button>
+                    <button id="passBtn">Pass Turn</button>
+                 </div>
+            </div>
+
+            <div id="activeTurn" class="hidden">
+                <div class="timer" id="timer">45</div>
+
+                <div id="loadingCard" class="loading hidden">
+                    Generating new card...
+                </div>
+
+                <div id="cardDisplay" class="card-container">
+                    <div class="card">
+                        <div class="main-word" id="mainWord">EXAMPLE</div>
+                        <p>Don't say these words:</p>
+                        <ul class="taboo-words" id="tabooWords">
+                            <li>Sample</li>
+                            <li>Instance</li>
+                            <li>Illustration</li>
+                            <li>Model</li>
+                            <li>Case</li>
+                        </ul>
+                         <div class="feedback" id="feedback"></div>
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <button id="correctBtn">Correct</button>
+                    <button id="tabooBtn">Taboo</button>
+                    <button id="skipBtn">Skip</button>
+                    <button id="undoBtn">Undo</button>
+                </div>
+                <div class="card-history" id="cardHistory">
+                  <h4>Card History</h4>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="turnSummary" class="hidden">
+                <h3>Turn Complete</h3>
+                <p id="turnSummaryText">Blue Team scored 2 points!</p>
+                <div class="center-buttons">
+                    <button id="nextTurnBtn">Next Turn</button>
+                </div>
+            </div>
+
+            <div id="gameOver" class="hidden">
+                <h2>Game Over!</h2>
+                <h3 id="winnerText">Blue Team wins!</h3>
+                <p id="finalScore">Final Score: Blue Team 10 - 8 Red Team</p>
+                <div class="center-buttons">
+                    <button id="newGameBtn">New Game</button>
+                </div>
+            </div>
+        </div>
+        <div id="instructionsModal" class="modal">
+            <div class="modal-content">
+                <h2>How to Play Taboo</h2>
+                <p>
+                    The goal of Taboo is for your team to guess the "main word" on the card without using any of the "taboo words" listed below it.
+                </p>
+                <ul>
+                    <li><strong>Setup:</strong> Teams are divided into two.  The game continues until one team reaches the target score.</li>
+                    <li><strong>Turns:</strong> Each team takes turns.  One player gives clues, and their teammates guess.</li>
+                    <li><strong>Giving Clues:</strong> The clue-giver tries to get their team to say the main word. They CANNOT use the taboo words.</li>
+                    <li><strong>Guessing:</strong> The clue-giver's teammates try to guess the main word.</li>
+                    <li><strong>Scoring:</strong>
+                        <ul>
+                            <li>Correct: +1 point for the guessing team.</li>
+                            <li>Taboo: +1 point for the opposing team.</li>
+                            <li>Skip: +1 point for the opposing team.</li>
+                        </ul>
+                    </li>
+                    <li><strong>End Turn:</strong> The turn ends when the timer runs out, or the clue-giver passes.</li>
+                </ul>
+                <p>The first team to reach the target score wins!</p>
+                <div class="modal-actions">
+                    <button id="closeModalBtn">Got it!</button>
+                </div>
+            </div>
+        </div>
+        <div id="tutorialOverlay" class="tutorial-overlay">
+            <h2>Welcome to Taboo!</h2>
+            <p>Here's a quick guide to get you started.</p>
+            <p>Your goal is to get your team to guess the main word without using the taboo words.</p>
+            <button id="startTutorialBtn">Start Tutorial</button>
+        </div>
+    </div>
+
+    <script>
+       // Game state
+        let gameState = {
+            team1: {
+                name: "Blue Team",
+                score: 0,
+                lastScore: 0
+            },
+            team2: {
+                name: "Red Team",
+                score: 0,
+                lastScore: 0
+            },
+            currentTeam: 1,
+            turnNumber: 1,
+            targetScore: 10,
+            turnDuration: 45,
+            timerInterval: null,
+            secondsLeft: 45,
+            difficulty: "regular",
+            cardSource: "deck",
+            apiKey: "",
+            currentCard: null,
+            cardsPlayed: [],
+            turnScoreCount: 0,
+            cardDeck: [],
+            deckLoaded: false,
+            previousActions: [],
+            currentPlayerPassed: false,
+            tutorialSeen: false,
+            availableCards: [] // Add this
+        };
+
+        // DOM Elements
+        const setupScreen = document.getElementById("setup");
+        const gameScreen = document.getElementById("game");
+        const pregameTurn = document.getElementById("pregameTurn");
+        const activeTurn = document.getElementById("activeTurn");
+        const turnSummary = document.getElementById("turnSummary");
+        const gameOver = document.getElementById("gameOver");
+        const loadingCard = document.getElementById("loadingCard");
+        const cardDisplay = document.getElementById("cardDisplay");
+        const startGameBtn = document.getElementById("startGameBtn");
+        const deckLoadingStatus = document.getElementById("deckLoadingStatus");
+        const correctBtn = document.getElementById("correctBtn");
+        const tabooBtn = document.getElementById("tabooBtn");
+        const skipBtn = document.getElementById("skipBtn");
+        const undoBtn = document.getElementById("undoBtn");
+        const cardHistoryList = document.getElementById("cardHistory").querySelector("ul");
+        const passBtn = document.getElementById("passBtn");
+        const instructionsModal = document.getElementById("instructionsModal");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        const showTutorialBtn = document.getElementById("showTutorialBtn");
+        const tutorialOverlay = document.getElementById("tutorialOverlay");
+        const startTutorialBtn = document.getElementById("startTutorialBtn");
+        const feedbackDisplay = document.getElementById("feedback"); // Get the feedback element
+
+
+        // Load the card deck
+        loadCardDeck();
+
+        // Initialize the game
+        document.getElementById("startGameBtn").addEventListener("click", startGame);
+        document.getElementById("startTurnBtn").addEventListener("click", startTurn);
+        correctBtn.addEventListener("click", () => scorePoint("correct"));
+        tabooBtn.addEventListener("click", () => scorePoint("taboo"));
+        skipBtn.addEventListener("click", () => scorePoint("skip"));
+        undoBtn.addEventListener("click", undoLastAction);
+        document.getElementById("nextTurnBtn").addEventListener("click", prepareNextTurn);
+        document.getElementById("newGameBtn").addEventListener("click", resetGame);
+        passBtn.addEventListener("click", passTurn);
+        closeModalBtn.addEventListener("click", () => {
+            instructionsModal.style.display = "none";
+            if (!gameState.tutorialSeen) {
+              gameState.tutorialSeen = true;
+              sessionStorage.setItem('tutorialSeen', 'true');
+            }
+        });
+        showTutorialBtn.addEventListener("click", () => {
+            instructionsModal.style.display = "flex";
+        });
+        startTutorialBtn.addEventListener("click", () => {
+            tutorialOverlay.style.display = "none";
+            gameState.tutorialSeen = true;
+            sessionStorage.setItem('tutorialSeen', 'true');
+            instructionsModal.style.display = "flex";
+        });
+
+        // Check for tutorial seen status on page load
+        if (sessionStorage.getItem('tutorialSeen') === 'true') {
+            gameState.tutorialSeen = true;
+            tutorialOverlay.style.display = "none";
+}else {
+             tutorialOverlay.style.display ="flex";
+        }
+
+        // Load the pre-generated card deck from JSON file
+        async function loadCardDeck() {
+            try {
+                const response = await fetch('taboo_cards.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load card deck: ${response.status} ${response.statusText}`);
+                }
+                const contentType = response.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    throw new TypeError("Expected JSON response, but got " + contentType);
+                }
+                gameState.cardDeck = await response.json();
+                gameState.deckLoaded = true;
+                deckLoadingStatus.textContent = `Card deck loaded successfully (${gameState.cardDeck.length} cards)`;
+                startGameBtn.disabled = false;
+            } catch (error) {
+                console.error("Error loading card deck:", error);
+                deckLoadingStatus.textContent = "Failed to load card deck. Using fallback cards.";
+                // Create a fallback deck with a few cards
+                gameState.cardDeck = [
+                    {
+                        mainWord: "COMPUTER",
+                        tabooWords: ["KEYBOARD", "SCREEN", "MOUSE", "TECHNOLOGY", "LAPTOP"]
+                    },
+                    {
+                        mainWord: "BEACH",
+                        tabooWords: ["SAND", "OCEAN", "SUN", "WAVE", "SWIM"]
+                    },
+                    {
+                        mainWord: "PIZZA",
+                        tabooWords: ["CHEESE", "PEPPERONI", "ITALIAN", "SLICE", "DOUGH"]
+                    }
+                ];
+                gameState.deckLoaded = true;
+                startGameBtn.disabled = false;
+            }
+        }
+
+        function startGame() {
+            // Get settings from form
+            gameState.team1.name = document.getElementById("team1Name").value || "Blue Team";
+            gameState.team2.name = document.getElementById("team2Name").value || "Red Team";
+            gameState.targetScore = parseInt(document.getElementById("targetScore").value) || 10;
+            gameState.turnDuration = parseInt(document.getElementById("turnDuration").value) || 45;
+            gameState.difficulty = document.getElementById("difficulty").value;
+            gameState.cardSource = document.getElementById("cardSource").value;
+            gameState.apiKey = document.getElementById("apiKey").value;
+
+            // Reset scores
+            gameState.team1.score = 0;
+            gameState.team2.score = 0;
+            gameState.team1.lastScore = 0;
+            gameState.team2.lastScore = 0;
+            gameState.turnNumber = 1;
+            gameState.currentTeam = 1;
+            gameState.cardsPlayed = [];
+            gameState.previousActions = [];
+            gameState.currentPlayerPassed = false;
+            gameState.availableCards = [...gameState.cardDeck]; // Initialize available cards
+
+            // Update display
+            document.getElementById("team1NameDisplay").textContent = gameState.team1.name;
+            document.getElementById("team2NameDisplay").textContent = gameState.team2.name;
+            document.getElementById("team1ScoreValue").textContent = "0";
+            document.getElementById("team2ScoreValue").textContent = "0";
+
+            // Switch screens
+            setupScreen.classList.add("hidden");
+            gameScreen.classList.remove("hidden");
+            prepareNextTurn();
+            if (!gameState.tutorialSeen) {
+                tutorialOverlay.style.display = "none";
+                instructionsModal.style.display = "flex";
+            }
+        }
+
+        function prepareNextTurn() {
+            // Hide other sections
+            activeTurn.classList.add("hidden");
+            turnSummary.classList.add("hidden");
+            gameOver.classList.add("hidden");
+
+            // Show pregame instructions
+            pregameTurn.classList.remove("hidden");
+
+            // Set turn indicator
+            const currentTeamName = gameState.currentTeam === 1 ? gameState.team1.name : gameState.team2.name;
+            const opposingTeamName = gameState.currentTeam === 1 ? gameState.team2.name : gameState.team1.name;
+
+            document.getElementById("turnIndicator").textContent = `${currentTeamName}'s Turn`;
+            document.getElementById("currentPlayerTeam").textContent = currentTeamName;
+            document.getElementById("opposingTeam").textContent = opposingTeamName;
+
+            // Reset turn score
+            gameState.turnScoreCount = 0;
+            gameState.secondsLeft = gameState.turnDuration;
+            clearInterval(gameState.timerInterval);
+            gameState.currentPlayerPassed = false;
+            updatePassButtonState();
+            feedbackDisplay.textContent = ''; // Clear any feedback message
+        }
+
+        async function startTurn() {
+            // Hide pregame
+            pregameTurn.classList.add("hidden");
+
+            // Reset timer
+            gameState.secondsLeft = gameState.turnDuration;
+            document.getElementById("timer").textContent = gameState.secondsLeft;
+
+            // Generate or get a card
+            await getNewCard();
+
+            // Show active turn
+            activeTurn.classList.remove("hidden");
+
+            // Start timer
+            gameState.timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            gameState.secondsLeft--;
+            document.getElementById("timer").textContent = gameState.secondsLeft;
+
+            if (gameState.secondsLeft <= 0) {
+                clearInterval(gameState.timerInterval);
+                endTurn();
+            }
+        }
+
+        async function getNewCard() {
+            // Show loading
+            loadingCard.classList.remove("hidden");
+            cardDisplay.classList.add("hidden");
+
+            if (gameState.cardSource === "live" && gameState.apiKey) {
+                try {
+                    const card = await generateCardWithAPI();
+                    gameState.currentCard = card;
+                } catch (error) {
+                    console.error("Error generating card:", error);
+                    // Fall back to pre-generated deck
+                    getRandomCardFromDeck();
+                }
+            } else {
+                getRandomCardFromDeck();
+            }
+
+            // Display the card
+            displayCard();
+             addCardToHistory(gameState.currentCard);
+            // Hide loading
+            loadingCard.classList.add("hidden");
+            cardDisplay.classList.remove("hidden");
+        }
+
+        async function generateCardWithAPI() {
+            const apiKey = gameState.apiKey;
+            const difficulty = gameState.difficulty;
+
+            const prompt = difficulty === "hard"
+                ? "Generate a Taboo game card with a challenging main word and 5 taboo words that are very closely associated with it. Format as JSON withmainWord and tabooWords array."
+                : "Generate a Taboo game card with a standard main word and 5 taboo words. Format as JSON with mainWord and tabooWords array.";
+
+            try {
+                const response = await fetch("https://api.openai.com/v1/chat/completions", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: "gpt-3.5-turbo",
+                        messages: [
+                            {
+                                role: "system",
+                                content: "You are a helpful assistant that generates Taboo game cards."
+                            },
+                            {
+                                role: "user",
+                                content: prompt
+                            }
+                        ],
+                        temperature: 0.7
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    throw new Error(data.error.message);
+                }
+
+                const content = data.choices[0].message.content;
+                let card;
+
+                try {
+                    // Extract JSON from response
+                    const jsonMatch = content.match(/\{[\s\S]*\}/);
+                    if (jsonMatch) {
+                        card = JSON.parse(jsonMatch[0]);
+                    } else {
+                        throw new Error("Could not extract JSON from response");
+                    }
+                } catch (parseError) {
+                    console.error("Error parsing card JSON:", parseError);
+                    // Create a fallback card
+                    card = {
+                        mainWord: "TABOO",
+                        tabooWords: ["GAME", "WORD", "FORBIDDEN", "GUESS", "CARD"]
+                    };
+                }
+
+                // Ensure mainWord is uppercase and tabooWords exist
+                card.mainWord = card.mainWord.toUpperCase();
+                if (!Array.isArray(card.tabooWords) || card.tabooWords.length < 5) {
+                    card.tabooWords = ["WORD", "GAME", "PLAY", "GUESS", "CARD"];
+                }
+
+                // Uppercase taboo words
+                card.tabooWords = card.tabooWords.map(word => word.toUpperCase());
+
+                return card;
+            } catch (error) {
+                console.error("API call failed:", error);
+                 displayFeedback("Failed to generate card. Please check your API key and connection.");
+                // Return a fallback card
+                return {
+                    mainWord: "API ERROR",
+                    tabooWords: ["CONNECTION", "FAILED", "KEY", "SERVER", "RETRY"]
+                };
+            }
+        }
+
+        function getRandomCardFromDeck() {
+            if (!gameState.deckLoaded || gameState.availableCards.length === 0) {
+                if (gameState.deckLoaded) {
+                    gameState.availableCards = [...gameState.cardDeck];
+                }
+                else{
+                    // Return a fallback card if deck isn't loaded
+                    gameState.currentCard = {
+                        mainWord: "LOADING ERROR",
+                        tabooWords: ["DECK", "CARDS", "FILE", "RELOAD", "JSON"]
+                    };
+                    return;
+                }
+            }
+
+            const randomIndex = Math.floor(Math.random() * gameState.availableCards.length);
+            gameState.currentCard = gameState.availableCards[randomIndex];
+            gameState.availableCards.splice(randomIndex, 1); // Remove the card
+
+        }
+
+        function displayCard() {
+            if (!gameState.currentCard) return;
+
+            document.getElementById("mainWord").textContent = gameState.currentCard.mainWord;
+
+            const tabooWordsList = document.getElementById("tabooWords");
+            tabooWordsList.innerHTML = '';
+
+            gameState.currentCard.tabooWords.forEach(word => {
+                const li = document.createElement("li");
+                li.textContent = word;
+                tabooWordsList.appendChild(li);
+            });
+        }
+
+        function scorePoint(action) {
+            clearInterval(gameState.timerInterval);
+
+            const currentTeamIndex = gameState.currentTeam;
+            const opposingTeamIndex = currentTeamIndex === 1 ? 2 : 1;
+
+            // Store the current score for undo
+            gameState[`team${currentTeamIndex}`].lastScore = gameState[`team${currentTeamIndex}`].score;
+            gameState[`team${opposingTeamIndex}`].lastScore = gameState[`team${opposingTeamIndex}`].score;
+
+
+            switch (action) {
+                case "correct":
+                    gameState[`team${currentTeamIndex}`].score++;
+                    gameState.turnScoreCount++;
+                    break;
+                case "taboo":
+                case "skip":
+                    gameState[`team${opposingTeamIndex}`].score++;
+                    gameState.turnScoreCount--;
+                    break;
+            }
+
+            // Update scores
+            document.getElementById("team1ScoreValue").textContent = gameState.team1.score;
+            document.getElementById("team2ScoreValue").textContent = gameState.team2.score;
+
+             // Store the action for undo
+            gameState.previousActions.push(action);
+
+            // Check if there's time left, if so get a new card
+            if (gameState.secondsLeft > 0) {
+                getNewCard();
+                gameState.timerInterval = setInterval(updateTimer, 1000);
+            } else {
+                endTurn();
+            }
+        }
+
+        function endTurn() {
+            // Hide active turn
+            activeTurn.classList.add("hidden");
+
+            // Show turn summary
+            turnSummary.classList.remove("hidden");
+
+            const currentTeamName = gameState.currentTeam === 1 ? gameState.team1.name : gameState.team2.name;
+            let summaryText;
+
+             if (gameState.turnScoreCount > 0) {
+                summaryText = `${currentTeamName} scored ${Math.abs(gameState.turnScoreCount)} point(s)!`;
+            } else if (gameState.turnScoreCount < 0) {
+                const opposingTeamName = gameState.currentTeam === 1 ? gameState.team2.name : gameState.team1.name;
+                summaryText = `${opposingTeamName} scored ${Math.abs(gameState.turnScoreCount)} point(s)!`;
+            } else {
+                summaryText = "No points scored this turn.";
+            }
+
+            document.getElementById("turnSummaryText").textContent = summaryText;
+
+            // Check if game is over
+            if (gameState.team1.score >= gameState.targetScore || gameState.team2.score >= gameState.targetScore) {
+                endGame();
+            } else {
+                // Switch teams for next turn
+                gameState.currentTeam = gameState.currentTeam === 1 ? 2 : 1;
+                gameState.turnNumber++;
+                gameState.secondsLeft = gameState.turnDuration;
+                clearInterval(gameState.timerInterval);
+                prepareNextTurn();
+            }
+        }
+
+        function endGame() {
+            // Hide turn summary
+            turnSummary.classList.add("hidden");
+
+            // Show game over
+            gameOver.classList.remove("hidden");
+
+            let winnerName, winnerScore, loserName, loserScore;
+
+            if (gameState.team1.score >= gameState.team2.score) {
+                winnerName = gameState.team1.name;
+                winnerScore = gameState.team1.score;
+                loserName = gameState.team2.name;
+                loserScore = gameState.team2.score;
+            } else {
+                winnerName = gameState.team2.name;
+                winnerScore = gameState.team2.score;
+                loserName = gameState.team1.name;
+                loserScore = gameState.team1.score;
+            }
+
+            document.getElementById("winnerText").textContent = `${winnerName} wins!`;
+            document.getElementById("finalScore").textContent = `Final Score: ${winnerName} ${winnerScore} - ${loserScore} ${loserName}`;
+        }
+
+        function resetGame() {
+            // Go back to setup screen
+            gameScreen.classList.add("hidden");
+            setupScreen.classList.remove("hidden");
+            // Reset game state
+             gameState = {
+                team1: {
+                    name: "Blue Team",
+                    score: 0,
+                    lastScore: 0
+                },
+                team2: {
+                    name: "Red Team",
+                    score: 0,
+                    lastScore: 0
+                },
+                currentTeam: 1,
+                turnNumber: 1,
+                targetScore: 10,
+                turnDuration: 45,
+                timerInterval: null,
+                secondsLeft: 45,
+                difficulty: "regular",
+                cardSource: "deck",
+                apiKey: "",
+                currentCard: null,
+                cardsPlayed: [],
+                turnScoreCount: 0,
+                cardDeck: [],
+                deckLoaded: false,
+                previousActions: [],
+                currentPlayerPassed: false,
+                tutorialSeen: false,
+                availableCards: [] // Add this
+            };
+            // Clear card history
+            cardHistoryList.innerHTML = '';
+            // Load card deck
+            loadCardDeck();
+            if (!gameState.tutorialSeen) {
+                 tutorialOverlay.style.display = "flex";
+            }
+        }
+
+        function undoLastAction() {
+            if (gameState.previousActions.length > 0) {
+                const lastAction = gameState.previousActions.pop();
+                const currentTeamIndex = gameState.currentTeam;
+                const opposingTeamIndex = currentTeamIndex === 1 ? 2 : 1;
+
+                // Restore the previous score
+                gameState[`team${currentTeamIndex}`].score = gameState[`team${currentTeamIndex}`].lastScore;
+                gameState[`team${opposingTeamIndex}`].score = gameState[`team${opposingTeamIndex}`].lastScore;
+
+                // Update the score display
+                document.getElementById("team1ScoreValue").textContent = gameState.team1.score;
+                document.getElementById("team2ScoreValue").textContent = gameState.team2.score;
+
+                gameState.turnScoreCount = 0;
+
+                clearInterval(gameState.timerInterval);
+                gameState.secondsLeft = gameState.turnDuration;
+                document.getElementById("timer").textContent = gameState.secondsLeft;
+                gameState.timerInterval = setInterval(updateTimer, 1000);
+
+                cardHistoryList.removeChild(cardHistoryList.lastChild);
+                getNewCard();
+            }
+             else {
+                displayFeedback("No actions to undo.");
+            }
+        }
+
+        function addCardToHistory(card) {
+            const li = document.createElement("li");
+            li.textContent = `${card.mainWord} - ${card.tabooWords.join(", ")}`;
+            cardHistoryList.appendChild(li);
+        }
+
+        function passTurn() {
+            if (!gameState.currentPlayerPassed) {
+                gameState.currentPlayerPassed = true;
+                clearInterval(gameState.timerInterval);
+                 // Switch teams for next turn
+                gameState.currentTeam = gameState.currentTeam === 1 ? 2 : 1;
+                gameState.turnNumber++;
+                prepareNextTurn();
+                updatePassButtonState();
+            }
+        }
+
+        function updatePassButtonState() {
+            passBtn.disabled = gameState.currentPlayerPassed;
+            passBtn.style.opacity = gameState.currentPlayerPassed ? 0.6 : 1;
+        }
+
+        function displayFeedback(message) {
+            feedbackDisplay.textContent = message;
+            feedbackDisplay.style.color = '#e74c3c';
+            setTimeout(() => {
+                feedbackDisplay.textContent = '';
+            }, 3000);
+        }
+
+    </script>
+</body>
+</html>
 
