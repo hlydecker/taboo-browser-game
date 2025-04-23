@@ -239,6 +239,7 @@
             font-size: 14px;
             color: #555;
             text-align: left;
+            display: none; /* Initially hidden */
         }
         .card-history h4 {
             margin-top: 0;
@@ -428,8 +429,8 @@
                 <div>
                     <label for="cardSource">Card Source:</label>
                     <select id="cardSource">
-                        <option value="deck">Pre-generated Deck</option>
                         <option value="live">Live (OpenAI API)</option>
+                        <option value="deck">Pre-generated Deck</option>
                     </select>
                 </div>
             </div>
@@ -437,6 +438,13 @@
                 <div>
                     <label for="apiKey">OpenAI API Key (for Live mode):</label>
                     <input type="password" id="apiKey" placeholder="sk-...">
+                </div>
+                 <div>
+                    <label for="enableVoice">Enable Voice Recognition (Experimental):</label>
+                    <select id="enableVoice">
+                        <option value="false">No</option>
+                        <option value="true">Yes</option>
+                    </select>
                 </div>
             </div>
             <div class="center-buttons">
@@ -497,7 +505,7 @@
                     <button id="undoBtn">Undo</button>
                 </div>
                 <div class="card-history" id="cardHistory">
-                  <h4>Card History</h4>
+                    <h4>Card History</h4>
                     <ul>
                     </ul>
                 </div>
@@ -508,6 +516,11 @@
                 <p id="turnSummaryText">Blue Team scored 2 points!</p>
                 <div class="center-buttons">
                     <button id="nextTurnBtn">Next Turn</button>
+                </div>
+                 <div class="card-history" id="turnSummaryCardHistory">
+                    <h4>Card History</h4>
+                    <ul>
+                    </ul>
                 </div>
             </div>
 
@@ -584,7 +597,9 @@
             previousActions: [],
             currentPlayerPassed: false,
             tutorialSeen: false,
-            availableCards: [] // Add this
+            availableCards: [], // Add this
+            enableVoiceRecognition: false, // Added for voice recognition
+            voiceRecognitionActive: false
         };
 
         // DOM Elements
@@ -610,6 +625,8 @@
         const tutorialOverlay = document.getElementById("tutorialOverlay");
         const startTutorialBtn = document.getElementById("startTutorialBtn");
         const feedbackDisplay = document.getElementById("feedback"); // Get the feedback element
+        const enableVoiceSelect = document.getElementById("enableVoice");
+        const turnSummaryCardHistoryList = document.getElementById("turnSummaryCardHistory").querySelector("ul");
 
 
         // Load the card deck
@@ -642,6 +659,15 @@
             instructionsModal.style.display = "flex";
         });
 
+        enableVoiceSelect.addEventListener("change", () => {
+            gameState.enableVoiceRecognition = enableVoiceSelect.value === "true";
+            if (gameState.enableVoiceRecognition) {
+                startVoiceRecognition();
+            } else {
+                stopVoiceRecognition();
+            }
+        });
+
         // Check for tutorial seen status on page load
         if (sessionStorage.getItem('tutorialSeen') === 'true') {
             gameState.tutorialSeen = true;
@@ -653,7 +679,7 @@
         // Load the pre-generated card deck from JSON file
         async function loadCardDeck() {
             try {
-                const response = await fetch('cards.json');
+                const response = await fetch('taboo_cards.json');
                 if (!response.ok) {
                     throw new Error(`Failed to load card deck: ${response.status} ${response.statusText}`);
                 }
@@ -697,6 +723,7 @@
             gameState.difficulty = document.getElementById("difficulty").value;
             gameState.cardSource = document.getElementById("cardSource").value;
             gameState.apiKey = document.getElementById("apiKey").value;
+            gameState.enableVoiceRecognition = enableVoiceSelect.value === "true";
 
             // Reset scores
             gameState.team1.score = 0;
@@ -724,6 +751,9 @@
                 tutorialOverlay.style.display = "none";
                 instructionsModal.style.display = "flex";
             }
+             if (gameState.enableVoiceRecognition) {
+                startVoiceRecognition();
+            }
         }
 
         function prepareNextTurn() {
@@ -734,6 +764,9 @@
 
             // Show pregame instructions
             pregameTurn.classList.remove("hidden");
+            cardHistoryList.style.display = 'none'; // Hide history during pre-game
+            turnSummaryCardHistoryList.innerHTML = ''; // Clear card history
+             document.getElementById("turnSummaryCardHistory").style.display = "none";
 
             // Set turn indicator
             const currentTeamName = gameState.currentTeam === 1 ? gameState.team1.name : gameState.team2.name;
@@ -755,6 +788,7 @@
         async function startTurn() {
             // Hide pregame
             pregameTurn.classList.add("hidden");
+            cardHistoryList.style.display = 'block'; // Show history during active turn
 
             // Reset timer
             gameState.secondsLeft = gameState.turnDuration;
@@ -962,9 +996,12 @@
         function endTurn() {
             // Hide active turn
             activeTurn.classList.add("hidden");
+            cardHistoryList.style.display = 'none';
 
             // Show turn summary
             turnSummary.classList.remove("hidden");
+            document.getElementById("turnSummaryCardHistory").style.display = "block";
+
 
             const currentTeamName = gameState.currentTeam === 1 ? gameState.team1.name : gameState.team2.name;
             let summaryText;
@@ -979,6 +1016,9 @@
             }
 
             document.getElementById("turnSummaryText").textContent = summaryText;
+
+             // Display the card history in the turn summary
+            turnSummaryCardHistoryList.innerHTML = cardHistoryList.innerHTML;
 
             // Check if game is over
             if (gameState.team1.score >= gameState.targetScore || gameState.team2.score >= gameState.targetScore) {
@@ -996,6 +1036,7 @@
         function endGame() {
             // Hide turn summary
             turnSummary.classList.add("hidden");
+            document.getElementById("turnSummaryCardHistory").style.display = "none";
 
             // Show game over
             gameOver.classList.remove("hidden");
@@ -1016,6 +1057,9 @@
 
             document.getElementById("winnerText").textContent = `${winnerName} wins!`;
             document.getElementById("finalScore").textContent = `Final Score: ${winnerName} ${winnerScore} - ${loserScore} ${loserName}`;
+            if (gameState.voiceRecognitionActive) {
+                stopVoiceRecognition();
+            }
         }
 
         function resetGame() {
@@ -1051,14 +1095,20 @@
                 previousActions: [],
                 currentPlayerPassed: false,
                 tutorialSeen: false,
-                availableCards: [] // Add this
+                availableCards: [], // Add this
+                enableVoiceRecognition: false,
+                voiceRecognitionActive: false
             };
             // Clear card history
             cardHistoryList.innerHTML = '';
+            turnSummaryCardHistoryList.innerHTML = '';
             // Load card deck
             loadCardDeck();
             if (!gameState.tutorialSeen) {
                  tutorialOverlay.style.display = "flex";
+            }
+            if (gameState.voiceRecognitionActive) {
+                stopVoiceRecognition();
             }
         }
 
@@ -1122,6 +1172,74 @@
             }, 3000);
         }
 
+        // Voice Recognition
+        let recognition;
+        let recognizing = false;
+
+        function startVoiceRecognition() {
+            if ('webkitSpeechRecognition' in window) {
+                recognition = new webkitSpeechRecognition();
+                recognition.continuous = true;
+                recognition.interimResults = true;
+                recognition.lang = 'en-US';
+
+                recognition.onstart = function() {
+                    recognizing = true;
+                    console.log("Voice recognition started.");
+                    displayFeedback("Voice recognition is active.  Say 'Correct', 'Taboo', or 'Skip'.");
+                    gameState.voiceRecognitionActive = true;
+                };
+
+                recognition.onerror = function(event) {
+                    console.error("Voice recognition error:", event.error);
+                    displayFeedback("Voice recognition error: " + event.error);
+                    stopVoiceRecognition();
+                };
+
+                recognition.onend = function() {
+                    recognizing = false;
+                    console.log("Voice recognition ended.");
+                    if (gameState.enableVoiceRecognition) {
+                         startVoiceRecognition();
+                    }
+                };
+
+                recognition.onresult = function(event) {
+                    let last = event.results.length - 1;
+                    let text = event.results[last][0].transcript;
+                    console.log("Heard:", text);
+
+                    text = text.toLowerCase();
+                    if (text.includes("correct")) {
+                        scorePoint("correct");
+                    } else if (text.includes("taboo")) {
+                        scorePoint("taboo");
+                    } else if (text.includes("skip")) {
+                        scorePoint("skip");
+                    }
+                };
+
+                recognition.start();
+            } else {
+                displayFeedback("Voice recognition is not supported in this browser.");
+                gameState.enableVoiceRecognition = false;
+                enableVoiceSelect.value = "false";
+            }
+        }
+
+        function stopVoiceRecognition() {
+            if (recognition) {
+                recognition.stop();
+                recognition.onend = null;
+                recognition.onerror = null;
+                recognition.onstart = null;
+                recognition.onresult = null;
+                recognizing = false;
+                gameState.voiceRecognitionActive = false;
+                console.log("Voice recognition stopped.");
+                displayFeedback("Voice recognition stopped.");
+            }
+        }
     </script>
 </body>
 </html>
