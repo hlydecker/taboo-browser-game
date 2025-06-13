@@ -1,0 +1,17 @@
+{
+  "name": "taboo-browser-game",
+  "version": "1.0.0",
+  "description": "This is a web-based version of the classic board game Taboo.  The goal of the game is for a player to get their teammates to guess a target word without using any of the forbidden words listed on the card.  The interface now includes responsive styles so it works smoothly on both mobile and desktop browsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "validate": "node validateCards.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
