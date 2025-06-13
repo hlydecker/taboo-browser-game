@@ -1,0 +1,2062 @@
+[
+  {
+    "mainWord": "COMPUTER",
+    "tabooWords": [
+      "KEYBOARD",
+      "SCREEN",
+      "MOUSE",
+      "TECHNOLOGY",
+      "LAPTOP"
+    ]
+  },
+  {
+    "mainWord": "BEACH",
+    "tabooWords": [
+      "SAND",
+      "OCEAN",
+      "SUN",
+      "WAVE",
+      "SWIM"
+    ]
+  },
+  {
+    "mainWord": "PIZZA",
+    "tabooWords": [
+      "CHEESE",
+      "PEPPERONI",
+      "ITALIAN",
+      "SLICE",
+      "DOUGH"
+    ]
+  },
+  {
+    "mainWord": "FOOTBALL",
+    "tabooWords": [
+      "SPORT",
+      "BALL",
+      "TOUCHDOWN",
+      "FIELD",
+      "QUARTERBACK"
+    ]
+  },
+  {
+    "mainWord": "MOVIE",
+    "tabooWords": [
+      "FILM",
+      "CINEMA",
+      "ACTOR",
+      "SCREEN",
+      "THEATER"
+    ]
+  },
+  {
+    "mainWord": "BOOK",
+    "tabooWords": [
+      "READ",
+      "PAGES",
+      "AUTHOR",
+      "LIBRARY",
+      "STORY"
+    ]
+  },
+  {
+    "mainWord": "COFFEE",
+    "tabooWords": [
+      "DRINK",
+      "CAFFEINE",
+      "BEAN",
+      "HOT",
+      "MORNING"
+    ]
+  },
+  {
+    "mainWord": "AIRPLANE",
+    "tabooWords": [
+      "FLY",
+      "TRAVEL",
+      "PILOT",
+      "AIRPORT",
+      "WINGS"
+    ]
+  },
+  {
+    "mainWord": "BICYCLE",
+    "tabooWords": [
+      "RIDE",
+      "WHEELS",
+      "PEDAL",
+      "HELMET",
+      "CYCLE"
+    ]
+  },
+  {
+    "mainWord": "BIRTHDAY",
+    "tabooWords": [
+      "CAKE",
+      "PRESENTS",
+      "PARTY",
+      "CELEBRATE",
+      "AGE"
+    ]
+  },
+  {
+    "mainWord": "CAMERA",
+    "tabooWords": [
+      "PHOTO",
+      "PICTURE",
+      "LENS",
+      "FLASH",
+      "PHOTOGRAPHY"
+    ]
+  },
+  {
+    "mainWord": "DENTIST",
+    "tabooWords": [
+      "TEETH",
+      "DRILL",
+      "CAVITY",
+      "APPOINTMENT",
+      "MOUTH"
+    ]
+  },
+  {
+    "mainWord": "ELEPHANT",
+    "tabooWords": [
+      "ANIMAL",
+      "TRUNK",
+      "TUSK",
+      "LARGE",
+      "GRAY"
+    ]
+  },
+  {
+    "mainWord": "FIREWORK",
+    "tabooWords": [
+      "EXPLOSION",
+      "SKY",
+      "COLOR",
+      "CELEBRATION",
+      "JULY"
+    ]
+  },
+  {
+    "mainWord": "GUITAR",
+    "tabooWords": [
+      "MUSIC",
+      "STRING",
+      "INSTRUMENT",
+      "PLAY",
+      "BAND"
+    ]
+  },
+  {
+    "mainWord": "HOSPITAL",
+    "tabooWords": [
+      "DOCTOR",
+      "NURSE",
+      "SICK",
+      "EMERGENCY",
+      "PATIENT"
+    ]
+  },
+  {
+    "mainWord": "INTERNET",
+    "tabooWords": [
+      "WEBSITE",
+      "ONLINE",
+      "COMPUTER",
+      "WEB",
+      "NETWORK"
+    ]
+  },
+  {
+    "mainWord": "JACKET",
+    "tabooWords": [
+      "COAT",
+      "CLOTHING",
+      "WEAR",
+      "COLD",
+      "ZIPPER"
+    ]
+  },
+  {
+    "mainWord": "KITCHEN",
+    "tabooWords": [
+      "COOK",
+      "FOOD",
+      "STOVE",
+      "REFRIGERATOR",
+      "ROOM"
+    ]
+  },
+  {
+    "mainWord": "LIBRARY",
+    "tabooWords": [
+      "BOOKS",
+      "READ",
+      "QUIET",
+      "BORROW",
+      "SHELVES"
+    ]
+  },
+  {
+    "mainWord": "MOUNTAIN",
+    "tabooWords": [
+      "CLIMB",
+      "HIGH",
+      "PEAK",
+      "HILL",
+      "SNOW"
+    ]
+  },
+  {
+    "mainWord": "NEWSPAPER",
+    "tabooWords": [
+      "READ",
+      "NEWS",
+      "PAPER",
+      "ARTICLE",
+      "DAILY"
+    ]
+  },
+  {
+    "mainWord": "OCTOPUS",
+    "tabooWords": [
+      "ANIMAL",
+      "TENTACLES",
+      "OCEAN",
+      "EIGHT",
+      "INK"
+    ]
+  },
+  {
+    "mainWord": "POPCORN",
+    "tabooWords": [
+      "MOVIE",
+      "BUTTER",
+      "KERNEL",
+      "SNACK",
+      "MICROWAVE"
+    ]
+  },
+  {
+    "mainWord": "QUEEN",
+    "tabooWords": [
+      "KING",
+      "CROWN",
+      "ROYAL",
+      "MONARCHY",
+      "PRINCESS"
+    ]
+  },
+  {
+    "mainWord": "RAINBOW",
+    "tabooWords": [
+      "COLORS",
+      "SKY",
+      "RAIN",
+      "ARCH",
+      "SPECTRUM"
+    ]
+  },
+  {
+    "mainWord": "SWIMMING",
+    "tabooWords": [
+      "WATER",
+      "POOL",
+      "STROKE",
+      "EXERCISE",
+      "DIVE"
+    ]
+  },
+  {
+    "mainWord": "TELESCOPE",
+    "tabooWords": [
+      "STARS",
+      "SPACE",
+      "MAGNIFY",
+      "LENS",
+      "ASTRONOMY"
+    ]
+  },
+  {
+    "mainWord": "UMBRELLA",
+    "tabooWords": [
+      "RAIN",
+      "PROTECTION",
+      "OPEN",
+      "HANDLE",
+      "WET"
+    ]
+  },
+  {
+    "mainWord": "VOLCANO",
+    "tabooWords": [
+      "ERUPTION",
+      "LAVA",
+      "MOUNTAIN",
+      "ASH",
+      "MAGMA"
+    ]
+  },
+  {
+    "mainWord": "WEDDING",
+    "tabooWords": [
+      "MARRIAGE",
+      "BRIDE",
+      "CEREMONY",
+      "GROOM",
+      "RECEPTION"
+    ]
+  },
+  {
+    "mainWord": "XYLOPHONE",
+    "tabooWords": [
+      "INSTRUMENT",
+      "MUSIC",
+      "WOODEN",
+      "MALLETS",
+      "PLAY"
+    ]
+  },
+  {
+    "mainWord": "YOGURT",
+    "tabooWords": [
+      "DAIRY",
+      "FOOD",
+      "BREAKFAST",
+      "FRUIT",
+      "SPOON"
+    ]
+  },
+  {
+    "mainWord": "ZEBRA",
+    "tabooWords": [
+      "ANIMAL",
+      "STRIPES",
+      "BLACK",
+      "WHITE",
+      "AFRICA"
+    ]
+  },
+  {
+    "mainWord": "ASTRONAUT",
+    "tabooWords": [
+      "SPACE",
+      "NASA",
+      "ROCKET",
+      "MOON",
+      "HELMET"
+    ]
+  },
+  {
+    "mainWord": "BACKPACK",
+    "tabooWords": [
+      "SCHOOL",
+      "BAG",
+      "CARRY",
+      "BOOKS",
+      "STRAP"
+    ]
+  },
+  {
+    "mainWord": "CHOCOLATE",
+    "tabooWords": [
+      "SWEET",
+      "CANDY",
+      "COCOA",
+      "DESSERT",
+      "BROWN"
+    ]
+  },
+  {
+    "mainWord": "DINOSAUR",
+    "tabooWords": [
+      "EXTINCT",
+      "PREHISTORIC",
+      "REPTILE",
+      "FOSSIL",
+      "JURASSIC"
+    ]
+  },
+  {
+    "mainWord": "ENVELOPE",
+    "tabooWords": [
+      "MAIL",
+      "LETTER",
+      "STAMP",
+      "PAPER",
+      "SEAL"
+    ]
+  },
+  {
+    "mainWord": "FIREFIGHTER",
+    "tabooWords": [
+      "FIRE",
+      "EMERGENCY",
+      "HOSE",
+      "TRUCK",
+      "RESCUE"
+    ]
+  },
+  {
+    "mainWord": "GLASSES",
+    "tabooWords": [
+      "EYES",
+      "VISION",
+      "SEE",
+      "LENSES",
+      "FRAMES"
+    ]
+  },
+  {
+    "mainWord": "HAMMOCK",
+    "tabooWords": [
+      "SWING",
+      "RELAX",
+      "SLEEP",
+      "TREES",
+      "ROPE"
+    ]
+  },
+  {
+    "mainWord": "ISLAND",
+    "tabooWords": [
+      "WATER",
+      "BEACH",
+      "OCEAN",
+      "TROPICAL",
+      "SURROUNDED"
+    ]
+  },
+  {
+    "mainWord": "JIGSAW",
+    "tabooWords": [
+      "PUZZLE",
+      "PIECES",
+      "PICTURE",
+      "FIT",
+      "COMPLETE"
+    ]
+  },
+  {
+    "mainWord": "KANGAROO",
+    "tabooWords": [
+      "ANIMAL",
+      "AUSTRALIA",
+      "JUMP",
+      "POUCH",
+      "JOEY"
+    ]
+  },
+  {
+    "mainWord": "LIGHTHOUSE",
+    "tabooWords": [
+      "OCEAN",
+      "SHIP",
+      "COAST",
+      "LIGHT",
+      "WARNING"
+    ]
+  },
+  {
+    "mainWord": "MICROWAVE",
+    "tabooWords": [
+      "HEAT",
+      "FOOD",
+      "KITCHEN",
+      "APPLIANCE",
+      "COOK"
+    ]
+  },
+  {
+    "mainWord": "NECKLACE",
+    "tabooWords": [
+      "JEWELRY",
+      "NECK",
+      "CHAIN",
+      "WEAR",
+      "PENDANT"
+    ]
+  },
+  {
+    "mainWord": "ORCHESTRA",
+    "tabooWords": [
+      "MUSIC",
+      "INSTRUMENTS",
+      "CONDUCTOR",
+      "SYMPHONY",
+      "MUSICIANS"
+    ]
+  },
+  {
+    "mainWord": "PENGUIN",
+    "tabooWords": [
+      "BIRD",
+      "ANTARCTICA",
+      "BLACK",
+      "WHITE",
+      "SWIM"
+    ]
+  },
+  {
+    "mainWord": "QUILT",
+    "tabooWords": [
+      "BLANKET",
+      "BED",
+      "WARM",
+      "SEWING",
+      "PATCHES"
+    ]
+  },
+  {
+    "mainWord": "ROLLERCOASTER",
+    "tabooWords": [
+      "RIDE",
+      "AMUSEMENT",
+      "PARK",
+      "THRILL",
+      "TRACK"
+    ]
+  },
+  {
+    "mainWord": "SNOWMAN",
+    "tabooWords": [
+      "SNOW",
+      "WINTER",
+      "CARROT",
+      "HAT",
+      "COLD"
+    ]
+  },
+  {
+    "mainWord": "TOOTHBRUSH",
+    "tabooWords": [
+      "TEETH",
+      "CLEAN",
+      "PASTE",
+      "MOUTH",
+      "BRISTLES"
+    ]
+  },
+  {
+    "mainWord": "UNIVERSITY",
+    "tabooWords": [
+      "SCHOOL",
+      "COLLEGE",
+      "DEGREE",
+      "EDUCATION",
+      "CAMPUS"
+    ]
+  },
+  {
+    "mainWord": "VIOLIN",
+    "tabooWords": [
+      "INSTRUMENT",
+      "MUSIC",
+      "STRING",
+      "BOW",
+      "ORCHESTRA"
+    ]
+  },
+  {
+    "mainWord": "WATERFALL",
+    "tabooWords": [
+      "WATER",
+      "FLOW",
+      "CASCADE",
+      "RIVER",
+      "RUSHING"
+    ]
+  },
+  {
+    "mainWord": "XRAY",
+    "tabooWords": [
+      "MEDICAL",
+      "BONE",
+      "DOCTOR",
+      "SCAN",
+      "IMAGE"
+    ]
+  },
+  {
+    "mainWord": "YACHT",
+    "tabooWords": [
+      "BOAT",
+      "OCEAN",
+      "SAIL",
+      "LUXURY",
+      "WATER"
+    ]
+  },
+  {
+    "mainWord": "ZOMBIE",
+    "tabooWords": [
+      "DEAD",
+      "WALKING",
+      "BRAIN",
+      "APOCALYPSE",
+      "UNDEAD"
+    ]
+  },
+  {
+    "mainWord": "AVOCADO",
+    "tabooWords": [
+      "FRUIT",
+      "GREEN",
+      "GUACAMOLE",
+      "PIT",
+      "TOAST"
+    ]
+  },
+  {
+    "mainWord": "BARBEQUE",
+    "tabooWords": [
+      "GRILL",
+      "MEAT",
+      "OUTDOORS",
+      "COOK",
+      "SUMMER"
+    ]
+  },
+  {
+    "mainWord": "CARNIVAL",
+    "tabooWords": [
+      "RIDES",
+      "GAMES",
+      "FAIR",
+      "COTTON CANDY",
+      "FUN"
+    ]
+  },
+  {
+    "mainWord": "DEMOCRACY",
+    "tabooWords": [
+      "GOVERNMENT",
+      "VOTE",
+      "ELECTION",
+      "PEOPLE",
+      "FREEDOM"
+    ]
+  },
+  {
+    "mainWord": "EARRING",
+    "tabooWords": [
+      "JEWELRY",
+      "EAR",
+      "PIERCE",
+      "WEAR",
+      "ACCESSORY"
+    ]
+  },
+  {
+    "mainWord": "FOUNTAIN",
+    "tabooWords": [
+      "WATER",
+      "PARK",
+      "WISH",
+      "COINS",
+      "SPRAY"
+    ]
+  },
+  {
+    "mainWord": "GARDEN",
+    "tabooWords": [
+      "PLANTS",
+      "FLOWERS",
+      "GROW",
+      "OUTDOORS",
+      "VEGETABLES"
+    ]
+  },
+  {
+    "mainWord": "HELICOPTER",
+    "tabooWords": [
+      "FLY",
+      "AIRCRAFT",
+      "ROTOR",
+      "BLADES",
+      "PILOT"
+    ]
+  },
+  {
+    "mainWord": "IGLOO",
+    "tabooWords": [
+      "SNOW",
+      "ICE",
+      "ESKIMO",
+      "ARCTIC",
+      "DOME"
+    ]
+  },
+  {
+    "mainWord": "JELLYFISH",
+    "tabooWords": [
+      "OCEAN",
+      "STING",
+      "TENTACLES",
+      "TRANSPARENT",
+      "SWIM"
+    ]
+  },
+  {
+    "mainWord": "KOALA",
+    "tabooWords": [
+      "ANIMAL",
+      "AUSTRALIA",
+      "EUCALYPTUS",
+      "BEAR",
+      "MARSUPIAL"
+    ]
+  },
+  {
+    "mainWord": "LADYBUG",
+    "tabooWords": [
+      "INSECT",
+      "RED",
+      "SPOTS",
+      "BEETLE",
+      "WINGS"
+    ]
+  },
+  {
+    "mainWord": "MARATHON",
+    "tabooWords": [
+      "RUN",
+      "RACE",
+      "MILES",
+      "DISTANCE",
+      "ENDURANCE"
+    ]
+  },
+  {
+    "mainWord": "NOODLES",
+    "tabooWords": [
+      "PASTA",
+      "EAT",
+      "SOUP",
+      "LONG",
+      "SPAGHETTI"
+    ]
+  },
+  {
+    "mainWord": "OLYMPICS",
+    "tabooWords": [
+      "SPORTS",
+      "ATHLETES",
+      "GAMES",
+      "MEDALS",
+      "COMPETITION"
+    ]
+  },
+  {
+    "mainWord": "PYRAMID",
+    "tabooWords": [
+      "EGYPT",
+      "TRIANGLE",
+      "PHARAOH",
+      "ANCIENT",
+      "DESERT"
+    ]
+  },
+  {
+    "mainWord": "QUICKSAND",
+    "tabooWords": [
+      "SINK",
+      "SAND",
+      "TRAP",
+      "STUCK",
+      "DANGER"
+    ]
+  },
+  {
+    "mainWord": "ROCKET",
+    "tabooWords": [
+      "SPACE",
+      "LAUNCH",
+      "NASA",
+      "ASTRONAUT",
+      "MOON"
+    ]
+  },
+  {
+    "mainWord": "SCARECROW",
+    "tabooWords": [
+      "FARM",
+      "BIRDS",
+      "FIELD",
+      "STRAW",
+      "CORN"
+    ]
+  },
+  {
+    "mainWord": "TREASURE",
+    "tabooWords": [
+      "HUNT",
+      "GOLD",
+      "CHEST",
+      "PIRATE",
+      "VALUABLE"
+    ]
+  },
+  {
+    "mainWord": "UNICORN",
+    "tabooWords": [
+      "MYTHICAL",
+      "HORSE",
+      "HORN",
+      "MAGICAL",
+      "FANTASY"
+    ]
+  },
+  {
+    "mainWord": "VAMPIRE",
+    "tabooWords": [
+      "BLOOD",
+      "FANGS",
+      "NIGHT",
+      "DRACULA",
+      "BITE"
+    ]
+  },
+  {
+    "mainWord": "WAFFLE",
+    "tabooWords": [
+      "BREAKFAST",
+      "SYRUP",
+      "GRID",
+      "IRON",
+      "BATTER"
+    ]
+  },
+  {
+    "mainWord": "XYLOPHONE",
+    "tabooWords": [
+      "INSTRUMENT",
+      "MUSIC",
+      "BARS",
+      "MALLETS",
+      "PERCUSSION"
+    ]
+  },
+  {
+    "mainWord": "YOGA",
+    "tabooWords": [
+      "EXERCISE",
+      "STRETCH",
+      "POSES",
+      "MEDITATION",
+      "FLEXIBILITY"
+    ]
+  },
+  {
+    "mainWord": "ZODIAC",
+    "tabooWords": [
+      "SIGNS",
+      "STARS",
+      "HOROSCOPE",
+      "ASTROLOGY",
+      "CONSTELLATION"
+    ]
+  },
+  {
+    "mainWord": "GREEDINESS",
+    "tabooWords": [
+      "SELFISHNESS",
+      "GLUTTONY",
+      "HOGGISHNESS",
+      "PIGGISHNESS",
+      "RAPACIOUSNESS"
+    ]
+  },
+  {
+    "mainWord": "TOILET_POWDER",
+    "tabooWords": [
+      "TALCUM POWDER",
+      "BATH POWDER",
+      "TOILET POWDER",
+      "TALCUM",
+      "DUSTING POWDER"
+    ]
+  },
+  {
+    "mainWord": "PRICKLY_PEAR_CACTUS",
+    "tabooWords": [
+      "PRICKLY PEAR",
+      "OPUNTIA LINDHEIMERI",
+      "PRICKLY PEAR CACTUS",
+      "NOPAL",
+      "OPUNTIA TUNA"
+    ]
+  },
+  {
+    "mainWord": "BASH",
+    "tabooWords": [
+      "BLOW",
+      "BELT",
+      "BRAWL",
+      "BUMP",
+      "SMASH"
+    ]
+  },
+  {
+    "mainWord": "SHOWCASE",
+    "tabooWords": [
+      "CASE",
+      "SETTING",
+      "TROPHY CASE",
+      "DISPLAY CASE",
+      "SCOPE"
+    ]
+  },
+  {
+    "mainWord": "CHICKEN_COOP",
+    "tabooWords": [
+      "FARM BUILDING",
+      "COOP",
+      "CHICKEN COOP",
+      "HENCOOP",
+      "HENHOUSE"
+    ]
+  },
+  {
+    "mainWord": "ROUGE_PLANT",
+    "tabooWords": [
+      "ROUGEBERRY",
+      "ROUGE PLANT",
+      "BLOODBERRY",
+      "RIVINA HUMILIS",
+      "HOUSEPLANT"
+    ]
+  },
+  {
+    "mainWord": "NEWSDEALER",
+    "tabooWords": [
+      "TRADESMAN",
+      "NEWSVENDOR",
+      "STOREKEEPER",
+      "NEWSAGENT",
+      "NEWSSTAND OPERATOR"
+    ]
+  },
+  {
+    "mainWord": "BEAN_CAPER",
+    "tabooWords": [
+      "BEAN CAPER",
+      "SHRUB",
+      "SYRIAN BEAN CAPER",
+      "ZYGOPHYLLUM FABAGO",
+      "BUSH"
+    ]
+  },
+  {
+    "mainWord": "WOMANHOOD",
+    "tabooWords": [
+      "PLACE",
+      "POST",
+      "BILLET",
+      "POSITION",
+      "CLASS"
+    ]
+  },
+  {
+    "mainWord": "FORBIDDING",
+    "tabooWords": [
+      "FORBIDDANCE",
+      "BANNING",
+      "TEST BAN",
+      "BAN",
+      "PROHIBITION"
+    ]
+  },
+  {
+    "mainWord": "CENTRE",
+    "tabooWords": [
+      "CENTER OF CURVATURE",
+      "PLACE",
+      "COGNITIVE CONTENT",
+      "HAECCEITY",
+      "NEURAL STRUCTURE"
+    ]
+  },
+  {
+    "mainWord": "CHARLES'S_WAIN",
+    "tabooWords": [
+      "WAGON",
+      "DIPPER",
+      "WAIN",
+      "PLOUGH",
+      "BIG DIPPER"
+    ]
+  },
+  {
+    "mainWord": "ASTER_FAMILY",
+    "tabooWords": [
+      "COMPOSITAE",
+      "FAMILY COMPOSITAE",
+      "ASTERID DICOT FAMILY",
+      "ASTERACEAE",
+      "FAMILY ASTERACEAE"
+    ]
+  },
+  {
+    "mainWord": "ENCEPHALOPATHY",
+    "tabooWords": [
+      "APHASIA",
+      "CREUTZFELDT-JAKOB DISEASE",
+      "BRAIN DISORDER",
+      "EPILEPSY",
+      "AGRAPHIA"
+    ]
+  },
+  {
+    "mainWord": "LENTINUS_EDODES",
+    "tabooWords": [
+      "SHIITAKE MUSHROOM",
+      "ORIENTAL BLACK MUSHROOM",
+      "FUNGUS",
+      "CHINESE BLACK MUSHROOM",
+      "GOLDEN OAK MUSHROOM"
+    ]
+  },
+  {
+    "mainWord": "GENUS_POTHOS",
+    "tabooWords": [
+      "SCINDAPSUS",
+      "GENUS POTHOS",
+      "MONOCOT GENUS",
+      "LILIOPSID GENUS",
+      "GENUS SCINDAPSUS"
+    ]
+  },
+  {
+    "mainWord": "CENTRARCHID",
+    "tabooWords": [
+      "LEPOMIS GIBBOSUS",
+      "BREAM",
+      "AMBLOPLITES RUPESTRIS",
+      "SUNFISH",
+      "PERCOIDEAN"
+    ]
+  },
+  {
+    "mainWord": "GINGERROOT",
+    "tabooWords": [
+      "FLAVOURING",
+      "FLAVORING",
+      "SEASONING",
+      "GINGER",
+      "FLAVOURER"
+    ]
+  },
+  {
+    "mainWord": "DALLIER",
+    "tabooWords": [
+      "LOAFER",
+      "IDLER",
+      "LAYABOUT",
+      "DO-NOTHING",
+      "BUM"
+    ]
+  },
+  {
+    "mainWord": "ROUGH_BRISTLEGRASS",
+    "tabooWords": [
+      "FOXTAIL GRASS",
+      "BOTTLE-GRASS",
+      "GREEN BRISTLEGRASS",
+      "SETARIA VIRIDIS",
+      "GREEN FOXTAIL"
+    ]
+  },
+  {
+    "mainWord": "EYE_SOCKET",
+    "tabooWords": [
+      "BODILY CAVITY",
+      "ORBITAL CAVITY",
+      "ORBIT",
+      "CRANIAL ORBIT",
+      "EYE SOCKET"
+    ]
+  },
+  {
+    "mainWord": "BENEFIT",
+    "tabooWords": [
+      "REWARD",
+      "SICKNESS BENEFIT",
+      "PERK",
+      "PUBLIC PRESENTATION",
+      "PERQUISITE"
+    ]
+  },
+  {
+    "mainWord": "TREATER",
+    "tabooWords": [
+      "NEGOTIANT",
+      "COMMUNICATOR",
+      "INTERCESSOR",
+      "MEDIATOR",
+      "INTERMEDIATOR"
+    ]
+  },
+  {
+    "mainWord": "LIGHT_INTENSITY",
+    "tabooWords": [
+      "CANDLEPOWER",
+      "STRENGTH",
+      "LIGHT INTENSITY",
+      "INTENSITY LEVEL",
+      "INTENSITY"
+    ]
+  },
+  {
+    "mainWord": "VERBASCUM_PHOENICEUM",
+    "tabooWords": [
+      "FLANNEL LEAF",
+      "VELVET PLANT",
+      "MULLEIN",
+      "VERBASCUM PHOENICEUM",
+      "PURPLE MULLEIN"
+    ]
+  },
+  {
+    "mainWord": "YELLOWHAMMER",
+    "tabooWords": [
+      "YELLOW-SHAFTED FLICKER",
+      "YELLOW BUNTING",
+      "FLICKER",
+      "COLAPTES AURATUS",
+      "EMBERIZA CITRINELLA"
+    ]
+  },
+  {
+    "mainWord": "CLASS_ACTION",
+    "tabooWords": [
+      "CLASS ACTION",
+      "CLASS-ACTION SUIT",
+      "CAUSA",
+      "CAUSE",
+      "LAWSUIT"
+    ]
+  },
+  {
+    "mainWord": "VENA_BRACHIOCEPHALICA",
+    "tabooWords": [
+      "VENOUS BLOOD VESSEL",
+      "BRACHIOCEPHALIC VEIN",
+      "VEIN",
+      "INNOMINATE VEIN",
+      "VENA"
+    ]
+  },
+  {
+    "mainWord": "UNDERSKIRT",
+    "tabooWords": [
+      "PETTICOAT",
+      "CRINOLINE",
+      "UNDERGARMENT",
+      "UNMENTIONABLE",
+      "HALF-SLIP"
+    ]
+  },
+  {
+    "mainWord": "SHAMMY_LEATHER",
+    "tabooWords": [
+      "CHAMMY LEATHER",
+      "CHAMMY",
+      "WASH LEATHER",
+      "SHAMMY",
+      "LEATHER"
+    ]
+  },
+  {
+    "mainWord": "KABALA",
+    "tabooWords": [
+      "ARCANUM",
+      "CABALA",
+      "KABBALAH",
+      "QABBALA",
+      "QABALA"
+    ]
+  },
+  {
+    "mainWord": "ANIMATE_BEING",
+    "tabooWords": [
+      "PEEPER",
+      "BEING",
+      "PREDATOR",
+      "RACER",
+      "METAZOAN"
+    ]
+  },
+  {
+    "mainWord": "BRITISH_CAPACITY_UNIT",
+    "tabooWords": [
+      "BUSHEL",
+      "FLUID DRAM",
+      "BRITISH CAPACITY UNIT",
+      "BBL",
+      "IMPERIAL GALLON"
+    ]
+  },
+  {
+    "mainWord": "TOLL_TAKER",
+    "tabooWords": [
+      "TOLLKEEPER",
+      "EMPLOYEE",
+      "TOLLMAN",
+      "TOLL TAKER",
+      "TOLLGATHERER"
+    ]
+  },
+  {
+    "mainWord": "WHEAT_GERM",
+    "tabooWords": [
+      "NUTRITION",
+      "WHEAT GERM",
+      "NUTRIMENT",
+      "ALIMENTATION",
+      "NOURISHMENT"
+    ]
+  },
+  {
+    "mainWord": "ENCAMPMENT",
+    "tabooWords": [
+      "CAMPSITE",
+      "CANTONMENT",
+      "BIVOUAC",
+      "CAMPING GROUND",
+      "BOOT CAMP"
+    ]
+  },
+  {
+    "mainWord": "JUBILATION",
+    "tabooWords": [
+      "TRIUMPH",
+      "OCCASION",
+      "SOCIAL OCCASION",
+      "REJOICING",
+      "SOCIAL FUNCTION"
+    ]
+  },
+  {
+    "mainWord": "TONE",
+    "tabooWords": [
+      "AUDITORY SENSATION",
+      "REVERBERANCE",
+      "SOUND",
+      "COLOR",
+      "SEMIBREVE"
+    ]
+  },
+  {
+    "mainWord": "TURBOFAN_ENGINE",
+    "tabooWords": [
+      "TURBOJET ENGINE",
+      "TURBOFAN ENGINE",
+      "JET ENGINE",
+      "FANJET ENGINE",
+      "FANJET"
+    ]
+  },
+  {
+    "mainWord": "GRAPHICAL_RECORD",
+    "tabooWords": [
+      "EXPONENTIAL CURVE",
+      "MYOGRAM",
+      "BALLISTOCARDIOGRAM",
+      "EEG",
+      "SEISMOGRAM"
+    ]
+  },
+  {
+    "mainWord": "ARMY_ANT",
+    "tabooWords": [
+      "DRIVER ANT",
+      "ANT",
+      "LEGIONARY ANT",
+      "ARMY ANT",
+      "EMMET"
+    ]
+  },
+  {
+    "mainWord": "LYONIA_MARIANA",
+    "tabooWords": [
+      "LYONIA MARIANA",
+      "STAGGERBUSH",
+      "BUSH",
+      "STAGGER BUSH",
+      "SHRUB"
+    ]
+  },
+  {
+    "mainWord": "MARY_JANE",
+    "tabooWords": [
+      "SENS",
+      "WEED",
+      "SMOKE",
+      "MARY JANE",
+      "POT"
+    ]
+  },
+  {
+    "mainWord": "PARKS",
+    "tabooWords": [
+      "ROSA PARKS",
+      "GEAR",
+      "PARCEL OF LAND",
+      "LOT",
+      "TRACT"
+    ]
+  },
+  {
+    "mainWord": "PREEMINENCE",
+    "tabooWords": [
+      "NOTE",
+      "DISTINCTION",
+      "KING",
+      "EMINENCE",
+      "HIGH STATUS"
+    ]
+  },
+  {
+    "mainWord": "FILM_MAKING",
+    "tabooWords": [
+      "FILM MAKING",
+      "MOVIE MAKING",
+      "MAKING",
+      "MOVIEMAKING",
+      "FASHIONING"
+    ]
+  },
+  {
+    "mainWord": "BOURBON",
+    "tabooWords": [
+      "RULER",
+      "EXTREME RIGHT-WINGER",
+      "REACTIONARY",
+      "DYNASTY",
+      "BOURBON DYNASTY"
+    ]
+  },
+  {
+    "mainWord": "JUVENESCENCE",
+    "tabooWords": [
+      "MATURATION",
+      "GROWING",
+      "ONTOGENY",
+      "ONTOGENESIS",
+      "GROWTH"
+    ]
+  },
+  {
+    "mainWord": "MOHAMMEDAN_CALENDAR",
+    "tabooWords": [
+      "MOHAMMEDAN CALENDAR",
+      "MOSLEM CALENDAR",
+      "ISLAMIC CALENDAR",
+      "MUSLIM CALENDAR",
+      "LUNAR CALENDAR"
+    ]
+  },
+  {
+    "mainWord": "MAJOR_POWER",
+    "tabooWords": [
+      "SUPERPOWER",
+      "COUNTRY",
+      "LAND",
+      "HEGEMON",
+      "NATION"
+    ]
+  },
+  {
+    "mainWord": "MILKY_WAY_GALAXY",
+    "tabooWords": [
+      "MILKY WAY",
+      "GALAXY",
+      "MILKY WAY GALAXY",
+      "MILKY WAY SYSTEM",
+      "EXTRAGALACTIC NEBULA"
+    ]
+  },
+  {
+    "mainWord": "I.E.D.",
+    "tabooWords": [
+      "IED",
+      "IMPROVISED EXPLOSIVE DEVICE",
+      "MOLOTOV COCKTAIL",
+      "GASOLINE BOMB",
+      "EXPLOSIVE DEVICE"
+    ]
+  },
+  {
+    "mainWord": "C",
+    "tabooWords": [
+      "ELEMENT",
+      "AMPERE-SECOND",
+      "GRAPHITE",
+      "CROCK",
+      "LAMPBLACK"
+    ]
+  },
+  {
+    "mainWord": "DEMOLISHING",
+    "tabooWords": [
+      "DEVASTATION",
+      "TEARING DOWN",
+      "RAZING",
+      "LEVELING",
+      "DESTRUCTION"
+    ]
+  },
+  {
+    "mainWord": "LYNDON_JOHNSON",
+    "tabooWords": [
+      "JOHNSON",
+      "LYNDON JOHNSON",
+      "PRESIDENT LYNDON JOHNSON",
+      "LBJ",
+      "PRESIDENT JOHNSON"
+    ]
+  },
+  {
+    "mainWord": "MISCHIEF-MAKER",
+    "tabooWords": [
+      "DISTURBER",
+      "RIOTER",
+      "TROUBLE MAKER",
+      "BAD HAT",
+      "DEVIL"
+    ]
+  },
+  {
+    "mainWord": "NEWSSHEET",
+    "tabooWords": [
+      "ACCOUNT",
+      "WRITE UP",
+      "STORY",
+      "MARKET LETTER",
+      "REPORT"
+    ]
+  },
+  {
+    "mainWord": "NYMPHALID_BUTTERFLY",
+    "tabooWords": [
+      "PEACOCK BUTTERFLY",
+      "MOURNING CLOAK",
+      "ADMIRAL",
+      "LIMENITIS ASTYANAX",
+      "PEACOCK"
+    ]
+  },
+  {
+    "mainWord": "RELATIONS",
+    "tabooWords": [
+      "KINSMAN",
+      "COMPARISON",
+      "ABSTRACT ENTITY",
+      "INDIVIDUAL",
+      "ROOT"
+    ]
+  },
+  {
+    "mainWord": "NERITID_GASTROPOD",
+    "tabooWords": [
+      "NERITINA",
+      "BLEEDING TOOTH",
+      "NERITA",
+      "NERITID",
+      "NERITA PELORONTA"
+    ]
+  },
+  {
+    "mainWord": "BRASSICA_RAPA_PERVIRIDIS",
+    "tabooWords": [
+      "TENDERGREEN",
+      "BRASSICA RAPA PERVIRIDIS",
+      "SPINACH MUSTARD",
+      "CRUCIFER",
+      "CRUCIFEROUS PLANT"
+    ]
+  },
+  {
+    "mainWord": "ORDER_ACTINIARIA",
+    "tabooWords": [
+      "ANIMAL ORDER",
+      "ACTINARIA",
+      "ORDER ACTINIARIA",
+      "ORDER ACTINARIA",
+      "ACTINIARIA"
+    ]
+  },
+  {
+    "mainWord": "LAPPISH",
+    "tabooWords": [
+      "URALIC",
+      "SAME",
+      "SAAME",
+      "LAPP",
+      "SAAMI"
+    ]
+  },
+  {
+    "mainWord": "FUNERAL_CHAPEL",
+    "tabooWords": [
+      "FUNERAL PARLOUR",
+      "FUNERAL PARLOR",
+      "MORTUARY",
+      "FUNERAL CHAPEL",
+      "FUNERAL-RESIDENCE"
+    ]
+  },
+  {
+    "mainWord": "THRACO-PHRYGIAN",
+    "tabooWords": [
+      "INDO-HITTITE",
+      "INDO-EUROPEAN",
+      "THRACIAN",
+      "PHRYGIAN",
+      "INDO-EUROPEAN LANGUAGE"
+    ]
+  },
+  {
+    "mainWord": "OXYTETRACYCLINE_HYDROCHLORIDE",
+    "tabooWords": [
+      "ANTIBIOTIC",
+      "ANTIBIOTIC DRUG",
+      "OXYTETRACYCLINE",
+      "HYDROXYTETRACYCLINE",
+      "TERRAMYCIN"
+    ]
+  },
+  {
+    "mainWord": "LEONOTIS_NEPETAEFOLIA",
+    "tabooWords": [
+      "LEONOTIS NEPETAEFOLIA",
+      "HERB",
+      "LEONOTIS NEPETIFOLIA",
+      "LION'S-EAR",
+      "HERBACEOUS PLANT"
+    ]
+  },
+  {
+    "mainWord": "ROWING_CLUB",
+    "tabooWords": [
+      "SOCIETY",
+      "ORDER",
+      "CLUB",
+      "ROWING CLUB",
+      "LODGE"
+    ]
+  },
+  {
+    "mainWord": "ST._MARTIN",
+    "tabooWords": [
+      "MARTIN",
+      "ST. MARTIN",
+      "SAINT MARTIN",
+      "SAINT MAARTEN",
+      "ST. MAARTEN"
+    ]
+  },
+  {
+    "mainWord": "PURULENCE",
+    "tabooWords": [
+      "FESTERING",
+      "SYMPTOM",
+      "BODILY FLUID",
+      "LIQUID BODY SUBSTANCE",
+      "SANIES"
+    ]
+  },
+  {
+    "mainWord": "LUXURIOUSNESS",
+    "tabooWords": [
+      "LUXURY",
+      "OPULENCE",
+      "SUMPTUOUSNESS",
+      "WEALTH",
+      "WEALTHINESS"
+    ]
+  },
+  {
+    "mainWord": "ZIP_FASTENER",
+    "tabooWords": [
+      "HOLDFAST",
+      "FASTENER",
+      "ZIP",
+      "FASTENING",
+      "ZIPPER"
+    ]
+  },
+  {
+    "mainWord": "RELATIVE-IN-LAW",
+    "tabooWords": [
+      "SISTER-IN-LAW",
+      "FATHER-IN-LAW",
+      "RELATIVE",
+      "MOTHER-IN-LAW",
+      "BROTHER-IN-LAW"
+    ]
+  },
+  {
+    "mainWord": "ODD_MAN_OUT",
+    "tabooWords": [
+      "KOOK",
+      "ODD FISH",
+      "ODD MAN OUT",
+      "ODD FELLOW",
+      "ANOMALY"
+    ]
+  },
+  {
+    "mainWord": "ORGANIC",
+    "tabooWords": [
+      "GUANO",
+      "ORGANIC FERTILIZER",
+      "BONEMEAL",
+      "FERTILISER",
+      "ORGANIC FERTILISER"
+    ]
+  },
+  {
+    "mainWord": "RECKONER",
+    "tabooWords": [
+      "VADE MECUM",
+      "ESTIMATOR",
+      "READY RECKONER",
+      "EXPERT",
+      "SUBTRACTER"
+    ]
+  },
+  {
+    "mainWord": "BIBLIOPOLE",
+    "tabooWords": [
+      "BARGAINER",
+      "MONGER",
+      "BIBLIOPOLIST",
+      "DEALER",
+      "TRADER"
+    ]
+  },
+  {
+    "mainWord": "SEQUOIA_SEMPERVIRENS",
+    "tabooWords": [
+      "COAST REDWOOD",
+      "CALIFORNIA REDWOOD",
+      "SEQUOIA SEMPERVIRENS",
+      "SEQUOIA",
+      "REDWOOD"
+    ]
+  },
+  {
+    "mainWord": "SUICIDE",
+    "tabooWords": [
+      "KILL",
+      "SELF-DESTRUCTION",
+      "SEPPUKU",
+      "SELF-ANNIHILATION",
+      "HARIKARI"
+    ]
+  },
+  {
+    "mainWord": "BLACKSNAKE",
+    "tabooWords": [
+      "ELAPHE OBSOLETA",
+      "BLUE RACER",
+      "PILOT BLACKSNAKE",
+      "RAT SNAKE",
+      "BLACK RACER"
+    ]
+  },
+  {
+    "mainWord": "FLY_SHEET",
+    "tabooWords": [
+      "TENT FLAP",
+      "FLY",
+      "FLY SHEET",
+      "FLAP",
+      "RAINFLY"
+    ]
+  },
+  {
+    "mainWord": "BALD_EAGLE",
+    "tabooWords": [
+      "BIRD OF JOVE",
+      "EAGLE",
+      "HALIAEETUS LEUCOCEPHALUS",
+      "AMERICAN EAGLE",
+      "BALD EAGLE"
+    ]
+  },
+  {
+    "mainWord": "SALTBUSH",
+    "tabooWords": [
+      "DESERT HOLLY",
+      "ATRIPLEX HYMENELYTRA",
+      "QUAIL BRUSH",
+      "BUSH",
+      "ATRIPLEX LENTIFORMIS"
+    ]
+  },
+  {
+    "mainWord": "GROUND",
+    "tabooWords": [
+      "DIATOMITE",
+      "STUFF",
+      "TILTH",
+      "WETLAND",
+      "EARTH"
+    ]
+  },
+  {
+    "mainWord": "VIRGINIA_WATERLEAF",
+    "tabooWords": [
+      "INDIAN SALAD",
+      "HYDROPHYLLUM VIRGINIANUM",
+      "JOHN'S CABBAGE",
+      "SHAWNY",
+      "SHAWNEE SALAD"
+    ]
+  },
+  {
+    "mainWord": "INTERSEX",
+    "tabooWords": [
+      "HERMAPHRODITE",
+      "BISEXUAL",
+      "GYNANDROMORPH",
+      "ANDROGYNE",
+      "EPICENE"
+    ]
+  },
+  {
+    "mainWord": "DOE",
+    "tabooWords": [
+      "ENERGY DEPARTMENT",
+      "PLACENTAL MAMMAL",
+      "PLACENTAL",
+      "ENERGY",
+      "EUTHERIAN MAMMAL"
+    ]
+  },
+  {
+    "mainWord": "NIGHT_SHIFT",
+    "tabooWords": [
+      "GRAVEYARD SHIFT",
+      "WORK SHIFT",
+      "DUTY PERIOD",
+      "SHIFT",
+      "NIGHT SHIFT"
+    ]
+  },
+  {
+    "mainWord": "KRAUTHEAD",
+    "tabooWords": [
+      "KRAUT",
+      "HUN",
+      "JERRY",
+      "BOCHE",
+      "GERMAN"
+    ]
+  },
+  {
+    "mainWord": "HAREM",
+    "tabooWords": [
+      "LIVING QUARTERS",
+      "SERAIL",
+      "HAREEM",
+      "SERAGLIO",
+      "QUARTERS"
+    ]
+  },
+  {
+    "mainWord": "RIVETER",
+    "tabooWords": [
+      "RIVETING MACHINE",
+      "MACHINE",
+      "RIVETTER",
+      "SKILLED WORKMAN",
+      "SKILLED WORKER"
+    ]
+  },
+  {
+    "mainWord": "STOUTNESS",
+    "tabooWords": [
+      "OBESITY",
+      "CORPULENCE",
+      "FLESHINESS",
+      "STALWARTNESS",
+      "STRENGTH"
+    ]
+  },
+  {
+    "mainWord": "VITALIZER",
+    "tabooWords": [
+      "ENERGIZER",
+      "DOER",
+      "ANIMATOR",
+      "ENERGISER",
+      "WORKER"
+    ]
+  },
+  {
+    "mainWord": "APATOSAURUS_EXCELSUS",
+    "tabooWords": [
+      "APATOSAUR",
+      "APATOSAURUS",
+      "APATOSAURUS EXCELSUS",
+      "SAUROPOD",
+      "SAUROPOD DINOSAUR"
+    ]
+  },
+  {
+    "mainWord": "TWISTER",
+    "tabooWords": [
+      "SUPERTWISTER",
+      "FRIEDCAKE",
+      "TORNADO",
+      "CYCLONE",
+      "WATERSPOUT"
+    ]
+  },
+  {
+    "mainWord": "ERYTHROCYTE_SEDIMENTATION_RATE",
+    "tabooWords": [
+      "ERYTHROCYTE SEDIMENTATION RATE",
+      "SEDIMENTATION RATE",
+      "RATE",
+      "ESR",
+      "SED RATE"
+    ]
+  },
+  {
+    "mainWord": "GIN_MILL",
+    "tabooWords": [
+      "TAVERN",
+      "PUBLIC HOUSE",
+      "TAP HOUSE",
+      "FREE HOUSE",
+      "SALOON"
+    ]
+  },
+  {
+    "mainWord": "CORRECTIONAL_INSTITUTION",
+    "tabooWords": [
+      "JAILHOUSE",
+      "DETENTION HOUSE",
+      "GAOL",
+      "CORRECTIONAL INSTITUTION",
+      "PEN"
+    ]
+  },
+  {
+    "mainWord": "CORDS",
+    "tabooWords": [
+      "PANT",
+      "CLOTHESLINE",
+      "WIDE WALE",
+      "CLOTH",
+      "AGAL"
+    ]
+  },
+  {
+    "mainWord": "AIRCRAFT_CARRIER",
+    "tabooWords": [
+      "COMBAT SHIP",
+      "CARRIER",
+      "WAR VESSEL",
+      "FLATTOP",
+      "ATTACK AIRCRAFT CARRIER"
+    ]
+  },
+  {
+    "mainWord": "DUPLICATOR",
+    "tabooWords": [
+      "SETUP",
+      "PHOTOCOPIER",
+      "MIMEO",
+      "FAX",
+      "MIMEOGRAPH MACHINE"
+    ]
+  },
+  {
+    "mainWord": "MAGNETOMOTIVE_FORCE_UNIT",
+    "tabooWords": [
+      "GB",
+      "ELECTROMAGNETIC UNIT",
+      "EMU",
+      "MAGNETOMOTIVE FORCE UNIT",
+      "GI"
+    ]
+  },
+  {
+    "mainWord": "INDUCTANCE",
+    "tabooWords": [
+      "ELECTRICAL DEVICE",
+      "INDUCTOR",
+      "MUTUAL INDUCTION",
+      "SELF-INDUCTION",
+      "ELECTRICAL PHENOMENON"
+    ]
+  },
+  {
+    "mainWord": "SECOND_LAW_OF_MOTION",
+    "tabooWords": [
+      "NEWTON'S SECOND LAW",
+      "NEWTON'S SECOND LAW OF MOTION",
+      "LAW OF MOTION",
+      "NEWTON'S LAW OF MOTION",
+      "SECOND LAW OF MOTION"
+    ]
+  },
+  {
+    "mainWord": "PRETENDER",
+    "tabooWords": [
+      "NAME DROPPER",
+      "PSEUDO",
+      "HYPOCRITE",
+      "PSEUD",
+      "SWEET TALKER"
+    ]
+  },
+  {
+    "mainWord": "OBSERVER",
+    "tabooWords": [
+      "SOMEBODY",
+      "SPECTATOR",
+      "LISTENER",
+      "VIEWER",
+      "EXPERT"
+    ]
+  },
+  {
+    "mainWord": "PHYSIOLOGICAL_STATE",
+    "tabooWords": [
+      "AMYXIA",
+      "HYPOPIGMENTATION",
+      "ANAESTHESIA",
+      "DEPENDENCE",
+      "PHYSICAL CONDITION"
+    ]
+  },
+  {
+    "mainWord": "SPEAKER_SYSTEM",
+    "tabooWords": [
+      "LOUDSPEAKER SYSTEM",
+      "TWEETER",
+      "SPEAKER UNIT",
+      "LOUD HAILER",
+      "INTERCOM SPEAKER"
+    ]
+  },
+  {
+    "mainWord": "DEMEANOUR",
+    "tabooWords": [
+      "IMPROPRIETY",
+      "CITIZENSHIP",
+      "SWASHBUCKLING",
+      "BEHAVIOUR",
+      "TRAIT"
+    ]
+  },
+  {
+    "mainWord": "ATOMIZER",
+    "tabooWords": [
+      "NEBULIZER",
+      "NEBULISER",
+      "SPRAY",
+      "ATOMISER",
+      "AIRBRUSH"
+    ]
+  },
+  {
+    "mainWord": "STRIATED_MUSCLE",
+    "tabooWords": [
+      "ARTICULAR MUSCLE",
+      "MUSCULUS SPHINCTER ANI EXTERNUS",
+      "MUSCULUS TRAPEZIUS",
+      "SARTORIUS MUSCLE",
+      "MUSCULUS INTERCOSTALIS"
+    ]
+  },
+  {
+    "mainWord": "UMBRELLA",
+    "tabooWords": [
+      "DEFENCE",
+      "CONJUGATION",
+      "UNIFICATION",
+      "BROLLY",
+      "UNITING"
+    ]
+  },
+  {
+    "mainWord": "TORREY'S_PINE",
+    "tabooWords": [
+      "SOLEDAD PINE",
+      "GREY-LEAF PINE",
+      "PINE TREE",
+      "SABINE PINE",
+      "PINUS TORREYANA"
+    ]
+  },
+  {
+    "mainWord": "LINT",
+    "tabooWords": [
+      "FIBER",
+      "CLOTH",
+      "TEXTILE",
+      "MATERIAL",
+      "FIBRE"
+    ]
+  },
+  {
+    "mainWord": "ELECTRONIC_COMPUTER",
+    "tabooWords": [
+      "TOTALISATOR",
+      "GUEST",
+      "COMPUTING MACHINE",
+      "INTERNET SITE",
+      "ANALOG COMPUTER"
+    ]
+  },
+  {
+    "mainWord": "SCHOOL_TEXT",
+    "tabooWords": [
+      "CRAMMER",
+      "PRIMER",
+      "TEXTBOOK",
+      "READER",
+      "TEXT"
+    ]
+  },
+  {
+    "mainWord": "AMERICAN_MASTODONT",
+    "tabooWords": [
+      "MASTODONT",
+      "AMERICAN MASTODONT",
+      "MAMMUT AMERICANUM",
+      "AMERICAN MASTODON",
+      "MASTODON"
+    ]
+  },
+  {
+    "mainWord": "FSH",
+    "tabooWords": [
+      "GONADOTROPIC HORMONE",
+      "GONADOTROPHIN",
+      "FOLLICLE-STIMULATING HORMONE",
+      "GONADOTROPHIC HORMONE",
+      "GONADOTROPIN"
+    ]
+  },
+  {
+    "mainWord": "TRICHLOROMETHANE",
+    "tabooWords": [
+      "INHALATION GENERAL ANESTHETIC",
+      "INHALATION ANESTHETIC",
+      "HALOFORM",
+      "INHALATION ANAESTHETIC",
+      "CHLOROFORM"
+    ]
+  }
+]
