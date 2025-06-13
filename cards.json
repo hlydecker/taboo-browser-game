@@ -332,10 +332,6 @@
     "tabooWords": ["BREAKFAST", "SYRUP", "GRID", "IRON", "BATTER"]
   },
   {
-    "mainWord": "XYLOPHONE",
-    "tabooWords": ["INSTRUMENT", "MUSIC", "BARS", "MALLETS", "PERCUSSION"]
-  },
-  {
     "mainWord": "YOGA",
     "tabooWords": ["EXERCISE", "STRETCH", "POSES", "MEDITATION", "FLEXIBILITY"]
   },
