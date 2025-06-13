@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a web-based version of the classic board game Taboo.  The goal of the game is for a player to get their teammates to guess a target word without using any of the forbidden words listed on the card.
+This is a web-based version of the classic board game Taboo.  The goal of the game is for a player to get their teammates to guess a target word without using any of the forbidden words listed on the card.  The interface now includes responsive styles so it works smoothly on both mobile and desktop browsers.
 
 ## How to Play
 
