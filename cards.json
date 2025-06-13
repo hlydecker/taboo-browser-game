@@ -343,4 +343,33 @@
     "mainWord": "ZODIAC",
     "tabooWords": ["SIGNS", "STARS", "HOROSCOPE", "ASTROLOGY", "CONSTELLATION"]
   }
+,
+  {
+    "mainWord": "DIAMOND",
+    "tabooWords": ["GEM", "JEWEL", "ENGAGEMENT", "CARAT", "RING"]
+  },
+  {
+    "mainWord": "LANDSCAPE",
+    "tabooWords": ["SCENE", "VIEW", "PAINTING", "NATURE", "HORIZON"]
+  },
+  {
+    "mainWord": "PASSWORD",
+    "tabooWords": ["LOGIN", "SECURITY", "CODE", "ACCOUNT", "SECRET"]
+  },
+  {
+    "mainWord": "PHOTOSYNTHESIS",
+    "tabooWords": ["PLANTS", "LIGHT", "CHLOROPHYLL", "SUN", "ENERGY"]
+  },
+  {
+    "mainWord": "SUNFLOWER",
+    "tabooWords": ["YELLOW", "SEEDS", "PLANT", "TALL", "BLOOM"]
+  },
+  {
+    "mainWord": "THERMOMETER",
+    "tabooWords": ["TEMPERATURE", "MERCURY", "DEGREE", "FEVER", "MEASURE"]
+  },
+  {
+    "mainWord": "ZUCCHINI",
+    "tabooWords": ["VEGETABLE", "GREEN", "SQUASH", "COOK", "GARDEN"]
+  }
 ]
