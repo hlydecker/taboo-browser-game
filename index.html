@@ -503,14 +503,18 @@
 
             <h2 id="turnIndicator">Blue Team's Turn</h2>
 
-            <div id="pregameTurn" class="center-buttons">
-                <p>Get ready! <span id="currentPlayerTeam">Blue Team</span> player will give clues.</p>
-                <p><span id="opposingTeam">Red Team</span> player should watch for taboo words.</p>
-                 <div class="pregame-buttons">
-                    <button id="startTurnBtn">Start Turn</button>
-                    <button id="passBtn">Pass Turn</button>
-                 </div>
-            </div>
+        <div id="pregameTurn" class="center-buttons">
+            <p>Get ready! <span id="currentPlayerTeam">Blue Team</span> player will give clues.</p>
+            <p><span id="opposingTeam">Red Team</span> player should watch for taboo words.</p>
+             <div class="pregame-buttons">
+                <button id="startTurnBtn">Start Turn</button>
+                <button id="passBtn">Pass Turn</button>
+             </div>
+             <div class="card-history hidden" id="handoverCardHistory">
+                 <h4>Cards from Last Turn</h4>
+                 <ul></ul>
+             </div>
+        </div>
 
             <div id="activeTurn" class="hidden">
                 <div class="timer" id="timer">45</div>
@@ -635,7 +639,8 @@
             tutorialSeen: false,
             availableCards: [], // Add this
             enableVoiceRecognition: false, // Added for voice recognition
-            voiceRecognitionActive: false
+            voiceRecognitionActive: false,
+            lastTurnCards: []
         };
 
         // DOM Elements
@@ -663,6 +668,7 @@
         const feedbackDisplay = document.getElementById("feedback"); // Get the feedback element
         const enableVoiceSelect = document.getElementById("enableVoice");
         const turnSummaryCardHistoryList = document.getElementById("turnSummaryCardHistory").querySelector("ul");
+        const handoverCardHistoryList = document.getElementById("handoverCardHistory").querySelector("ul");
 
 
         // Load the card deck
@@ -769,6 +775,7 @@
             gameState.turnNumber = 1;
             gameState.currentTeam = 1;
             gameState.cardsPlayed = [];
+            gameState.lastTurnCards = [];
             gameState.previousActions = [];
             gameState.currentPlayerPassed = false;
             gameState.availableCards = [...gameState.cardDeck]; // Initialize available cards
@@ -801,8 +808,21 @@
             // Show pregame instructions
             pregameTurn.classList.remove("hidden");
             cardHistoryList.style.display = 'none'; // Hide history during pre-game
-            turnSummaryCardHistoryList.innerHTML = ''; // Clear card history
-             document.getElementById("turnSummaryCardHistory").style.display = "none";
+            turnSummaryCardHistoryList.innerHTML = '';
+            document.getElementById("turnSummaryCardHistory").style.display = "none";
+
+            // Show cards from the previous turn
+            handoverCardHistoryList.innerHTML = '';
+            if (gameState.lastTurnCards && gameState.lastTurnCards.length > 0) {
+                gameState.lastTurnCards.forEach(card => {
+                    const li = document.createElement('li');
+                    li.textContent = `${card.mainWord} - ${card.tabooWords.join(', ')}`;
+                    handoverCardHistoryList.appendChild(li);
+                });
+                document.getElementById('handoverCardHistory').style.display = 'block';
+            } else {
+                document.getElementById('handoverCardHistory').style.display = 'none';
+            }
 
             // Set turn indicator
             const currentTeamName = gameState.currentTeam === 1 ? gameState.team1.name : gameState.team2.name;
@@ -824,6 +844,11 @@
         async function startTurn() {
             // Hide pregame
             pregameTurn.classList.add("hidden");
+            document.getElementById("handoverCardHistory").style.display = 'none';
+            handoverCardHistoryList.innerHTML = '';
+            cardHistoryList.innerHTML = '';
+            gameState.cardsPlayed = [];
+            gameState.lastTurnCards = [];
             cardHistoryList.style.display = 'block'; // Show history during active turn
 
             // Reset timer
@@ -870,7 +895,8 @@
 
             // Display the card
             displayCard();
-             addCardToHistory(gameState.currentCard);
+            gameState.cardsPlayed.push(gameState.currentCard);
+            addCardToHistory(gameState.currentCard);
             // Hide loading
             loadingCard.classList.add("hidden");
             cardDisplay.classList.remove("hidden");
@@ -1055,6 +1081,7 @@
 
              // Display the card history in the turn summary
             turnSummaryCardHistoryList.innerHTML = cardHistoryList.innerHTML;
+            gameState.lastTurnCards = [...gameState.cardsPlayed];
 
             // Check if game is over
             if (gameState.team1.score >= gameState.targetScore || gameState.team2.score >= gameState.targetScore) {
@@ -1133,7 +1160,8 @@
                 tutorialSeen: false,
                 availableCards: [], // Add this
                 enableVoiceRecognition: false,
-                voiceRecognitionActive: false
+                voiceRecognitionActive: false,
+                lastTurnCards: []
             };
             // Clear card history
             cardHistoryList.innerHTML = '';
@@ -1170,6 +1198,7 @@
                 gameState.timerInterval = setInterval(updateTimer, 1000);
 
                 cardHistoryList.removeChild(cardHistoryList.lastChild);
+                gameState.cardsPlayed.pop();
                 getNewCard();
             }
              else {
