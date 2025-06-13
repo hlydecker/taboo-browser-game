@@ -389,6 +389,42 @@
             background-color: #2980b9;
         }
 
+        /* Responsive adjustments for small screens */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .team-setup {
+                flex-direction: column;
+            }
+            .settings {
+                flex-direction: column;
+            }
+            .settings > div {
+                min-width: 100%;
+            }
+            .scoreboard {
+                flex-direction: column;
+            }
+            .game-controls {
+                flex-direction: column;
+            }
+            button {
+                width: 100%;
+                margin: 5px 0;
+                font-size: 16px;
+            }
+            .modal-content {
+                width: 95%;
+            }
+            .main-word {
+                font-size: 28px;
+            }
+            .taboo-words li {
+                font-size: 16px;
+            }
+        }
+
     </style>
 </head>
 <body>
