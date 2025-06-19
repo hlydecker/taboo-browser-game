@@ -29,6 +29,10 @@ This is a web-based version of the classic board game Taboo.  The goal of the ga
 
 The game data (words and forbidden words) is stored in the `cards_extended.json` file with 206 cards.
 
+## Advanced Mode
+
+By default the game uses this pre-generated deck. You can enable advanced mode to generate new cards with an LLM. Provide your API key in the setup form and set the **Advanced Mode** toggle to "On".
+
 ## Live Version
 
 You can play the game here: [Link to your GitHub Pages site]
