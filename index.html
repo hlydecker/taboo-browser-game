@@ -11,7 +11,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background: linear-gradient(#f5f5f5, #e0e0e0);
             color: #333;
         }
         .hidden {
@@ -112,6 +112,12 @@
             outline: none;
             border-color: #3498db;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .advanced-toggle {
+            margin-top: 10px;
+        }
+        #advancedOptions {
+            margin-top: 20px;
         }
         .scoreboard {
             display: flex;
@@ -454,33 +460,38 @@
                     <input type="number" id="turnDuration" min="10" max="120" value="45">
                 </div>
             </div>
-            <div class="settings">
-                <div>
-                    <label for="difficulty">Difficulty Level:</label>
-                    <select id="difficulty">
-                        <option value="regular">Regular</option>
-                        <option value="hard">Hard</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="advancedMode">Advanced Mode (LLM Cards):</label>
-                    <select id="advancedMode">
-                        <option value="false">Off</option>
-                        <option value="true">On</option>
-                    </select>
-                </div>
+            <div class="center-buttons advanced-toggle">
+                <button id="toggleAdvancedBtn">Show Advanced Options</button>
             </div>
-            <div class="settings">
-                <div>
-                    <label for="apiKey">OpenAI API Key (for Live mode):</label>
-                    <input type="password" id="apiKey" placeholder="sk-...">
+            <div id="advancedOptions" class="hidden">
+                <div class="settings">
+                    <div>
+                        <label for="difficulty">Difficulty Level:</label>
+                        <select id="difficulty">
+                            <option value="regular">Regular</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="advancedMode">Advanced Mode (LLM Cards):</label>
+                        <select id="advancedMode">
+                            <option value="false">Off</option>
+                            <option value="true">On</option>
+                        </select>
+                    </div>
                 </div>
-                 <div>
-                    <label for="enableVoice">Enable Voice Recognition (Experimental):</label>
-                    <select id="enableVoice">
-                        <option value="false">No</option>
-                        <option value="true">Yes</option>
-                    </select>
+                <div class="settings">
+                    <div>
+                        <label for="apiKey">OpenAI API Key (for Live mode):</label>
+                        <input type="password" id="apiKey" placeholder="sk-...">
+                    </div>
+                    <div>
+                        <label for="enableVoice">Enable Voice Recognition (Experimental):</label>
+                        <select id="enableVoice">
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="center-buttons">
@@ -668,6 +679,8 @@
         const feedbackDisplay = document.getElementById("feedback"); // Get the feedback element
         const enableVoiceSelect = document.getElementById("enableVoice");
         const advancedModeSelect = document.getElementById("advancedMode");
+        const toggleAdvancedBtn = document.getElementById("toggleAdvancedBtn");
+        const advancedOptions = document.getElementById("advancedOptions");
         const turnSummaryCardHistoryList = document.getElementById("turnSummaryCardHistory").querySelector("ul");
         const handoverCardHistoryList = document.getElementById("handoverCardHistory").querySelector("ul");
 
@@ -700,6 +713,11 @@
             gameState.tutorialSeen = true;
             sessionStorage.setItem('tutorialSeen', 'true');
             instructionsModal.style.display = "flex";
+        });
+
+        toggleAdvancedBtn.addEventListener("click", () => {
+            advancedOptions.classList.toggle("hidden");
+            toggleAdvancedBtn.textContent = advancedOptions.classList.contains("hidden") ? "Show Advanced Options" : "Hide Advanced Options";
         });
 
         enableVoiceSelect.addEventListener("change", () => {
