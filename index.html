@@ -463,10 +463,10 @@
                     </select>
                 </div>
                 <div>
-                    <label for="cardSource">Card Source:</label>
-                    <select id="cardSource">
-                        <option value="live">Live (OpenAI API)</option>
-                        <option value="deck">Pre-generated Deck</option>
+                    <label for="advancedMode">Advanced Mode (LLM Cards):</label>
+                    <select id="advancedMode">
+                        <option value="false">Off</option>
+                        <option value="true">On</option>
                     </select>
                 </div>
             </div>
@@ -627,7 +627,7 @@
             timerInterval: null,
             secondsLeft: 45,
             difficulty: "regular",
-            cardSource: "deck",
+            advancedMode: false,
             apiKey: "",
             currentCard: null,
             cardsPlayed: [],
@@ -667,6 +667,7 @@
         const startTutorialBtn = document.getElementById("startTutorialBtn");
         const feedbackDisplay = document.getElementById("feedback"); // Get the feedback element
         const enableVoiceSelect = document.getElementById("enableVoice");
+        const advancedModeSelect = document.getElementById("advancedMode");
         const turnSummaryCardHistoryList = document.getElementById("turnSummaryCardHistory").querySelector("ul");
         const handoverCardHistoryList = document.getElementById("handoverCardHistory").querySelector("ul");
 
@@ -763,7 +764,7 @@
             gameState.targetScore = parseInt(document.getElementById("targetScore").value) || 10;
             gameState.turnDuration = parseInt(document.getElementById("turnDuration").value) || 45;
             gameState.difficulty = document.getElementById("difficulty").value;
-            gameState.cardSource = document.getElementById("cardSource").value;
+            gameState.advancedMode = document.getElementById("advancedMode").value === "true";
             gameState.apiKey = document.getElementById("apiKey").value;
             gameState.enableVoiceRecognition = enableVoiceSelect.value === "true";
 
@@ -880,7 +881,7 @@
             loadingCard.classList.remove("hidden");
             cardDisplay.classList.add("hidden");
 
-            if (gameState.cardSource === "live" && gameState.apiKey) {
+            if (gameState.advancedMode && gameState.apiKey) {
                 try {
                     const card = await generateCardWithAPI();
                     gameState.currentCard = card;
@@ -1148,7 +1149,7 @@
                 timerInterval: null,
                 secondsLeft: 45,
                 difficulty: "regular",
-                cardSource: "deck",
+                advancedMode: false,
                 apiKey: "",
                 currentCard: null,
                 cardsPlayed: [],
