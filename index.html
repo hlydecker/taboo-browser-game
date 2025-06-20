@@ -740,7 +740,7 @@
         // Load the pre-generated card deck from JSON file
         async function loadCardDeck() {
             try {
-                const response = await fetch('./cards_extended.json');
+                const response = await fetch('./cards_new.json');
                 if (!response.ok) {
                     throw new Error(`Failed to load card deck: ${response.status} ${response.statusText}`);
                 }

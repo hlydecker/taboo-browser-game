@@ -27,7 +27,7 @@ This is a web-based version of the classic board game Taboo.  The goal of the ga
 
 ## Game Data
 
-The game data (words and forbidden words) is stored in the `cards_extended.json` file with 206 cards.
+The game data (words and forbidden words) is stored in the `cards_new.json` file with 151 curated cards inspired by Australian and general Western culture.
 
 ## Advanced Mode
 
